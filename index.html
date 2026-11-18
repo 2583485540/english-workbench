@@ -54,6 +54,8 @@ button.btn.danger{color:#d76a8b;border-color:#f4d3de}
 .tag.o{background:#fdf2e3;color:#c98a3d}
 .tag.b{background:#fde8ee;color:#d76a8b}
 .tag.new{background:linear-gradient(120deg,#fde8ee,#efe9ff);color:#b0568a;font-weight:600}
+.tag.rel{background:#f3f0fa;color:#7a6bb8;cursor:pointer;transition:all .15s}
+.tag.rel:hover{background:var(--accd);color:#fff;transform:translateY(-1px)}
 .phrow{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:13px 16px;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;background:#fff;transition:box-shadow .2s}
 .phrow:hover{box-shadow:var(--soft)}
 .phrow .en{font-weight:600;font-size:15px}
@@ -223,3611 +225,3889 @@ code{background:#f4f0fb;padding:2px 7px;border-radius:6px;font-size:12.5px;font-
 
 <script>
 const SEED = {
-  "version": 1,
-  "updatedAt": "2026-11-18T03:00:00",
-  "categories": [
+ "version": 1,
+ "updatedAt": "2026-11-18T08:00:00",
+ "categories": [
+  {
+   "id": "sentence",
+   "name": "句型·固定搭配"
+  },
+  {
+   "id": "come",
+   "name": "come 系列"
+  },
+  {
+   "id": "care",
+   "name": "care 系列"
+  },
+  {
+   "id": "mind",
+   "name": "mind 系列"
+  },
+  {
+   "id": "give",
+   "name": "give 系列"
+  },
+  {
+   "id": "add",
+   "name": "add 系列"
+  },
+  {
+   "id": "get",
+   "name": "get 系列"
+  },
+  {
+   "id": "put",
+   "name": "put 系列"
+  },
+  {
+   "id": "agree",
+   "name": "agree 系列"
+  },
+  {
+   "id": "persuade",
+   "name": "persuade 系列"
+  },
+  {
+   "id": "outof",
+   "name": "out of 专题"
+  },
+  {
+   "id": "attitude",
+   "name": "情感·态度"
+  },
+  {
+   "id": "writing",
+   "name": "写作·书信"
+  },
+  {
+   "id": "dream",
+   "name": "梦想·行动"
+  },
+  {
+   "id": "quake",
+   "name": "地震单元"
+  },
+  {
+   "id": "general",
+   "name": "常用短语"
+  }
+ ],
+ "phrases": [
+  {
+   "id": "p001",
+   "en": "due to",
+   "zh": "由于",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p002",
+   "en": "thanks to",
+   "zh": "多亏；幸亏",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p003",
+   "en": "than ever before",
+   "zh": "比以往任何时候",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p004",
+   "en": "the former..., the latter...",
+   "zh": "前者……后者……",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p005",
+   "en": "no such thing",
+   "zh": "没有这样的事",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p006",
+   "en": "the same as",
+   "zh": "和……一样",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p007",
+   "en": "face to face",
+   "zh": "面对面",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p008",
+   "en": "heart to heart",
+   "zh": "坦诚地",
+   "cat": "sentence",
+   "note": "同类：face to face / shoulder to shoulder / back to back",
+   "mastery": 0
+  },
+  {
+   "id": "p009",
+   "en": "shoulder to shoulder",
+   "zh": "肩并肩地",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p010",
+   "en": "back to back",
+   "zh": "背靠背地",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p011",
+   "en": "a series of",
+   "zh": "一系列的",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p012",
+   "en": "on purpose",
+   "zh": "故意",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p013",
+   "en": "in order to",
+   "zh": "为了；目的是",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p014",
+   "en": "for the purpose of...",
+   "zh": "为了……的目的",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p015",
+   "en": "at dusk",
+   "zh": "在黄昏时刻",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p016",
+   "en": "by chance / by accident",
+   "zh": "偶然地；意外地",
+   "cat": "sentence",
+   "note": "原文误写为 be chance/accident，正确为 by",
+   "mastery": 0
+  },
+  {
+   "id": "p017",
+   "en": "the first time",
+   "zh": "第一次（作连词，接时间状语从句）",
+   "cat": "sentence",
+   "note": "The first time I saw her, ...",
+   "mastery": 0
+  },
+  {
+   "id": "p018",
+   "en": "for the first time",
+   "zh": "第一次（介词短语，不接从句）",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p019",
+   "en": "as usual",
+   "zh": "照常",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p020",
+   "en": "at midnight",
+   "zh": "在午夜",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p021",
+   "en": "as if",
+   "zh": "仿佛",
+   "cat": "sentence",
+   "note": "it seems as if + 句子 似乎、好像",
+   "mastery": 0
+  },
+  {
+   "id": "p022",
+   "en": "too...to...",
+   "zh": "太……以致不能",
+   "cat": "sentence",
+   "note": "too nervous to eat 太紧张而吃不下",
+   "mastery": 0
+  },
+  {
+   "id": "p023",
+   "en": "ever since",
+   "zh": "自从",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p024",
+   "en": "at present",
+   "zh": "现在；目前",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p025",
+   "en": "at the end of",
+   "zh": "在……末",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p026",
+   "en": "by the end of",
+   "zh": "到……末为止",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p027",
+   "en": "in the end",
+   "zh": "最后",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p028",
+   "en": "at an end",
+   "zh": "结束；终结",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p029",
+   "en": "right away",
+   "zh": "立刻；马上",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p030",
+   "en": "to one's surprise",
+   "zh": "令某人惊讶的是",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p031",
+   "en": "to tell (you) the truth",
+   "zh": "（跟你）说实话",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p032",
+   "en": "generally speaking",
+   "zh": "一般来说",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p033",
+   "en": "judging from",
+   "zh": "根据……判断",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p034",
+   "en": "to be exact",
+   "zh": "准确地说",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p035",
+   "en": "believe it or not",
+   "zh": "信不信由你",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p036",
+   "en": "in a word",
+   "zh": "总之",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p037",
+   "en": "in one's view / in one's opinion",
+   "zh": "依某人看来",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p038",
+   "en": "instead of",
+   "zh": "代替；而不是",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p039",
+   "en": "more than one",
+   "zh": "不止一个",
+   "cat": "sentence",
+   "note": "主语谓语用单数",
+   "mastery": 0
+  },
+  {
+   "id": "p040",
+   "en": "such as",
+   "zh": "例如",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p041",
+   "en": "such...as...",
+   "zh": "像……这样的",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p042",
+   "en": "a (great) number of",
+   "zh": "许多；大量的",
+   "cat": "sentence",
+   "note": "修饰可数名词复数",
+   "mastery": 0
+  },
+  {
+   "id": "p043",
+   "en": "the number of",
+   "zh": "……的数目",
+   "cat": "sentence",
+   "note": "作主语时谓语用单数",
+   "mastery": 0
+  },
+  {
+   "id": "p044",
+   "en": "one third / two thirds",
+   "zh": "三分之一 / 三分之二",
+   "cat": "sentence",
+   "note": "分子>1 时分母加 s",
+   "mastery": 0
+  },
+  {
+   "id": "p045",
+   "en": "thousands of",
+   "zh": "数以千计的",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p046",
+   "en": "because of",
+   "zh": "因为；由于",
+   "cat": "sentence",
+   "note": "后接名词/代词/动名词",
+   "mastery": 0
+  },
+  {
+   "id": "p047",
+   "en": "be based on",
+   "zh": "以……为基础/根据",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p048",
+   "en": "be expected to do",
+   "zh": "被期待做某事；应该做某事",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p049",
+   "en": "hold on",
+   "zh": "坚持；别挂断（电话）",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p050",
+   "en": "in...direction / in the direction of",
+   "zh": "朝……方向",
+   "cat": "sentence",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p051",
+   "en": "in all directions",
+   "zh": "朝四面八方",
+   "cat": "sentence",
+   "note": "= in every direction",
+   "mastery": 0
+  },
+  {
+   "id": "p052",
+   "en": "come to",
+   "zh": "来到；谈到；共计",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p053",
+   "en": "come on",
+   "zh": "加油；快点",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p054",
+   "en": "come about",
+   "zh": "发生；产生",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p055",
+   "en": "come across",
+   "zh": "偶遇；碰到",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p056",
+   "en": "come out",
+   "zh": "出来；出版；开花",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p057",
+   "en": "come up with",
+   "zh": "提出（想法/办法）",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p058",
+   "en": "come to life / come to oneself",
+   "zh": "苏醒",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p059",
+   "en": "come out of the cracks",
+   "zh": "从裂缝里冒出",
+   "cat": "come",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p060",
+   "en": "care about",
+   "zh": "关心",
+   "cat": "care",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p061",
+   "en": "care for",
+   "zh": "照顾",
+   "cat": "care",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p062",
+   "en": "take care",
+   "zh": "注意；保重",
+   "cat": "care",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p063",
+   "en": "take care of",
+   "zh": "负责；照顾",
+   "cat": "care",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p064",
+   "en": "with care",
+   "zh": "当心；仔细地",
+   "cat": "care",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p065",
+   "en": "care to do sth.",
+   "zh": "愿意做某事",
+   "cat": "care",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p066",
+   "en": "be concerned about / for...",
+   "zh": "担心……；关心……",
+   "cat": "care",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p067",
+   "en": "change one's mind",
+   "zh": "改变主意",
+   "cat": "mind",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p068",
+   "en": "make up one's mind to do sth.",
+   "zh": "下决心做某事",
+   "cat": "mind",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p069",
+   "en": "read one's mind",
+   "zh": "看出某人的心思",
+   "cat": "mind",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p070",
+   "en": "speak one's mind",
+   "zh": "说出心里话",
+   "cat": "mind",
+   "note": "原文 Spead 为笔误",
+   "mastery": 0
+  },
+  {
+   "id": "p071",
+   "en": "keep sth. in mind",
+   "zh": "记住某事",
+   "cat": "mind",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p072",
+   "en": "lose one's mind",
+   "zh": "失去理智",
+   "cat": "mind",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p073",
+   "en": "give in",
+   "zh": "投降；屈服",
+   "cat": "give",
+   "note": "对比：hand in = turn in 提交",
+   "mastery": 0
+  },
+  {
+   "id": "p074",
+   "en": "hand in / turn in",
+   "zh": "提交",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p075",
+   "en": "give up",
+   "zh": "放弃",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p076",
+   "en": "give away",
+   "zh": "赠送；泄露",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p077",
+   "en": "give off",
+   "zh": "发出（气味）",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p078",
+   "en": "give back",
+   "zh": "归还；使恢复",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p079",
+   "en": "give out",
+   "zh": "公布；耗尽；发出（光/热/气味等）",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p080",
+   "en": "give over",
+   "zh": "移交",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p081",
+   "en": "congratulate sb. on sth.",
+   "zh": "就某事祝贺某人",
+   "cat": "give",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p082",
+   "en": "add up",
+   "zh": "合计；算账",
+   "cat": "add",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p083",
+   "en": "add...to...",
+   "zh": "把……加到……",
+   "cat": "add",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p084",
+   "en": "add up to",
+   "zh": "共计……；意味着……",
+   "cat": "add",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p085",
+   "en": "get through",
+   "zh": "通过；用完；接通；被理解；做完",
+   "cat": "get",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p086",
+   "en": "break through",
+   "zh": "突破",
+   "cat": "get",
+   "note": "原文误写 Bread through",
+   "mastery": 0
+  },
+  {
+   "id": "p087",
+   "en": "go through",
+   "zh": "经历；经受；穿过；审查；通过；用尽",
+   "cat": "get",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p088",
+   "en": "get along with",
+   "zh": "与……相处",
+   "cat": "get",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p089",
+   "en": "get on/along with",
+   "zh": "进展；与……相处",
+   "cat": "get",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p090",
+   "en": "get away with",
+   "zh": "做（坏事）而不受惩罚；携带潜逃",
+   "cat": "get",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p091",
+   "en": "get away from",
+   "zh": "摆脱；逃避",
+   "cat": "get",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p092",
+   "en": "get across",
+   "zh": "被理解；把……讲清楚",
+   "cat": "get",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p093",
+   "en": "get down to doing sth.",
+   "zh": "开始；着手做某事",
+   "cat": "get",
+   "note": "to 是介词，后接 doing",
+   "mastery": 0
+  },
+  {
+   "id": "p094",
+   "en": "put up",
+   "zh": "建造；搭起；举起；张贴；为……提供食宿",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p095",
+   "en": "put up the tent",
+   "zh": "支起帐篷",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p096",
+   "en": "put down",
+   "zh": "放下；记下",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p097",
+   "en": "set aside",
+   "zh": "放在一旁；存储",
+   "cat": "put",
+   "note": "原文 out oside 为笔误，应为 set aside",
+   "mastery": 0
+  },
+  {
+   "id": "p098",
+   "en": "put back",
+   "zh": "放回；送回；拨回（钟表指针）",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p099",
+   "en": "put forward",
+   "zh": "向前移；提出；拨快（钟表）",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p100",
+   "en": "put off",
+   "zh": "延期；推迟",
+   "cat": "put",
+   "note": "off = 离开 → 推到后面去；off 还表离开：turn off 关掉",
+   "mastery": 0
+  },
+  {
+   "id": "p101",
+   "en": "put away",
+   "zh": "收拾；处理",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p102",
+   "en": "put out",
+   "zh": "熄灭",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p103",
+   "en": "put up with",
+   "zh": "忍受",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p104",
+   "en": "put on",
+   "zh": "穿上；盖上；放上",
+   "cat": "put",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p105",
+   "en": "agree with",
+   "zh": "同意（某人/观点）",
+   "cat": "agree",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p106",
+   "en": "agree with sb.",
+   "zh": "同意某人",
+   "cat": "agree",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p107",
+   "en": "agree to",
+   "zh": "同意（他人观点、计划等）",
+   "cat": "agree",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p108",
+   "en": "agree on",
+   "zh": "就……达成一致",
+   "cat": "agree",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p109",
+   "en": "disagree with...",
+   "zh": "与……不一致；不符合",
+   "cat": "agree",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p110",
+   "en": "disagree with sb. on/about sth.",
+   "zh": "在某事上与某人不一致",
+   "cat": "agree",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p111",
+   "en": "sth. disagree with sb.",
+   "zh": "某事（食物/气候）不适合某人",
+   "cat": "agree",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p112",
+   "en": "persuade sb. (not) to do sth.",
+   "zh": "说服某人（不）做某事",
+   "cat": "persuade",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p113",
+   "en": "persuade sb. into doing sth.",
+   "zh": "说服某人做某事（成功说服）",
+   "cat": "persuade",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p114",
+   "en": "persuade sb. out of doing sth.",
+   "zh": "说服某人不做某事",
+   "cat": "persuade",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p115",
+   "en": "persuade sb. of sth.",
+   "zh": "使某人相信某事",
+   "cat": "persuade",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p116",
+   "en": "persuade sb. that 从句",
+   "zh": "使某人相信……",
+   "cat": "persuade",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p117",
+   "en": "try to persuade sb. = advise sb.",
+   "zh": "劝说（不一定成功）",
+   "cat": "persuade",
+   "note": "advise 只是劝，persuade 是劝成",
+   "mastery": 0
+  },
+  {
+   "id": "p118",
+   "en": "out of the room",
+   "zh": "从……里面出来",
+   "cat": "outof",
+   "note": "come out of the room 走出房间",
+   "mastery": 0
+  },
+  {
+   "id": "p119",
+   "en": "out of money",
+   "zh": "没钱（缺乏、没有了）",
+   "cat": "outof",
+   "note": "用法2：缺乏、没有",
+   "mastery": 0
+  },
+  {
+   "id": "p120",
+   "en": "out of control",
+   "zh": "失控（在……范围之外）",
+   "cat": "outof",
+   "note": "用法3",
+   "mastery": 0
+  },
+  {
+   "id": "p121",
+   "en": "3 out of 10",
+   "zh": "十分之三（比例；从总数里）",
+   "cat": "outof",
+   "note": "用法4",
+   "mastery": 0
+  },
+  {
+   "id": "p122",
+   "en": "out of curiosity",
+   "zh": "出于好奇（出于原因）",
+   "cat": "outof",
+   "note": "用法5",
+   "mastery": 0
+  },
+  {
+   "id": "p123",
+   "en": "out of danger",
+   "zh": "脱离危险（脱离状态）",
+   "cat": "outof",
+   "note": "用法6；反义：into / in",
+   "mastery": 0
+  },
+  {
+   "id": "p124",
+   "en": "out of date",
+   "zh": "过时",
+   "cat": "outof",
+   "note": "常见短语",
+   "mastery": 0
+  },
+  {
+   "id": "p125",
+   "en": "out of stock",
+   "zh": "缺货",
+   "cat": "outof",
+   "note": "常见短语",
+   "mastery": 0
+  },
+  {
+   "id": "p126",
+   "en": "calm down",
+   "zh": "使平静下来",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p127",
+   "en": "be crazy about",
+   "zh": "对……疯狂/着迷",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p128",
+   "en": "laugh at",
+   "zh": "嘲笑",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p129",
+   "en": "no longer = not...any longer",
+   "zh": "不再",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p130",
+   "en": "suffer from",
+   "zh": "遭受；患病",
+   "cat": "attitude",
+   "note": "原文 form 为笔误",
+   "mastery": 0
+  },
+  {
+   "id": "p131",
+   "en": "recover from",
+   "zh": "从……中恢复；康复",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p132",
+   "en": "be/get tired of",
+   "zh": "厌倦；对……厌烦",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p133",
+   "en": "be tired from/with",
+   "zh": "因……而疲惫",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p134",
+   "en": "tired out",
+   "zh": "疲倦不堪",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p135",
+   "en": "pack up",
+   "zh": "装箱；打包；停止工作",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p136",
+   "en": "fall in love with sb.",
+   "zh": "爱上某人",
+   "cat": "attitude",
+   "note": "原文 fill in love 为笔误",
+   "mastery": 0
+  },
+  {
+   "id": "p137",
+   "en": "receive a letter from sb.",
+   "zh": "收到某人的来信",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p138",
+   "en": "receive a letter for sb.",
+   "zh": "替某人收一封信",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p139",
+   "en": "ignore sb./sth.",
+   "zh": "不理睬某人/某事",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p140",
+   "en": "happen to do sth.",
+   "zh": "碰巧做某事",
+   "cat": "attitude",
+   "note": "(sb) happen to do sth",
+   "mastery": 0
+  },
+  {
+   "id": "p141",
+   "en": "burst into tears / burst out crying",
+   "zh": "突然大哭",
+   "cat": "attitude",
+   "note": "burst into tears = burst out crying，两者结构不同",
+   "mastery": 0
+  },
+  {
+   "id": "p142",
+   "en": "be dressed in",
+   "zh": "穿着",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p143",
+   "en": "stay awake",
+   "zh": "醒着；睡不着",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p144",
+   "en": "fall behind",
+   "zh": "落后",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p145",
+   "en": "stay behind",
+   "zh": "留下",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p146",
+   "en": "can hardly wait to do sth. / can't wait to do sth.",
+   "zh": "迫不及待做某事",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p147",
+   "en": "feel like doing sth.",
+   "zh": "想要做某事；喜欢做",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p148",
+   "en": "insist on doing sth.",
+   "zh": "坚持做某事",
+   "cat": "attitude",
+   "note": "原文 insist to do 有误；insist on doing / insist that sb. (should) do",
+   "mastery": 0
+  },
+  {
+   "id": "p149",
+   "en": "insist that sb. (should) do",
+   "zh": "坚决要求（虚拟语气）",
+   "cat": "attitude",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p150",
+   "en": "written English",
+   "zh": "写作；书面英语",
+   "cat": "writing",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p151",
+   "en": "write to sb.",
+   "zh": "给……写信",
+   "cat": "writing",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p152",
+   "en": "spoken English",
+   "zh": "口语",
+   "cat": "writing",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p153",
+   "en": "oral English",
+   "zh": "口语",
+   "cat": "writing",
+   "note": "= spoken English",
+   "mastery": 0
+  },
+  {
+   "id": "p154",
+   "en": "settle down",
+   "zh": "定居下来",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p155",
+   "en": "set down",
+   "zh": "记下",
+   "cat": "dream",
+   "note": "对比 set aside 放在一旁",
+   "mastery": 0
+  },
+  {
+   "id": "p156",
+   "en": "make voyages",
+   "zh": "进行航海",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p157",
+   "en": "go on a voyage",
+   "zh": "出航；出国旅行",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p158",
+   "en": "be on a voyage",
+   "zh": "在航行",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p159",
+   "en": "take an active part in",
+   "zh": "积极参加",
+   "cat": "dream",
+   "note": "原文 a active 为笔误",
+   "mastery": 0
+  },
+  {
+   "id": "p160",
+   "en": "be active in",
+   "zh": "在……方面很积极活跃",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p161",
+   "en": "devote sth. to (doing) sth.",
+   "zh": "把……奉献给；致力于",
+   "cat": "dream",
+   "note": "to 是介词",
+   "mastery": 0
+  },
+  {
+   "id": "p162",
+   "en": "fight for",
+   "zh": "为……而战",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p163",
+   "en": "fight against",
+   "zh": "反对……而战",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p164",
+   "en": "fight with",
+   "zh": "与……并肩作战",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p165",
+   "en": "be in prison",
+   "zh": "在监狱被监禁（表状态）",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p166",
+   "en": "put sb. in prison",
+   "zh": "把某人关进监狱（表动作）",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p167",
+   "en": "break prison",
+   "zh": "越狱",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p168",
+   "en": "be generous to sb.",
+   "zh": "对某人大方",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p169",
+   "en": "be generous with sth.",
+   "zh": "在某事上大方",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p170",
+   "en": "play a part/role in",
+   "zh": "在……中起作用；扮演一个角色",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p171",
+   "en": "play an important role/part in",
+   "zh": "在……中起重要作用",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p172",
+   "en": "play a leading role/part",
+   "zh": "起主要作用；扮演主角",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p173",
+   "en": "play the role/part of (sb.)",
+   "zh": "（在剧中）扮演（某人）角色",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p174",
+   "en": "make sense",
+   "zh": "讲得通；有意义；合理",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p175",
+   "en": "make sense of",
+   "zh": "了解……的意义",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p176",
+   "en": "at/under one's command",
+   "zh": "奉某人之命；由……指挥",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p177",
+   "en": "have a command of",
+   "zh": "掌握",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p178",
+   "en": "request for",
+   "zh": "要求；请求；需要",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p179",
+   "en": "request sth.",
+   "zh": "要求……；请求……",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p180",
+   "en": "request sb. to do sth.",
+   "zh": "要求某人做某事",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p181",
+   "en": "request that sb. (should) do",
+   "zh": "要求某人做……（虚拟语气）",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p182",
+   "en": "dream about/of doing sth.",
+   "zh": "梦想做某事",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p183",
+   "en": "dream a ... dream",
+   "zh": "做一个……的梦",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p184",
+   "en": "realize one's dream",
+   "zh": "实现梦想（梦想变成现实）",
+   "cat": "dream",
+   "note": "realize = 使成真",
+   "mastery": 0
+  },
+  {
+   "id": "p185",
+   "en": "achieve one's dream",
+   "zh": "实现梦想（通过努力达成）",
+   "cat": "dream",
+   "note": "同义：make one's dream come true",
+   "mastery": 0
+  },
+  {
+   "id": "p186",
+   "en": "determine to do sth.",
+   "zh": "下决心做某事",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p187",
+   "en": "determine sb. to do sth.",
+   "zh": "使某人下定决心做某事",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p188",
+   "en": "be interested in",
+   "zh": "对……感兴趣",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p189",
+   "en": "get sb. interested in",
+   "zh": "使某人对……感兴趣",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p190",
+   "en": "prefer doing A to doing B",
+   "zh": "比起做B，更喜欢做A",
+   "cat": "dream",
+   "note": "I prefer reading to watching TV.",
+   "mastery": 0
+  },
+  {
+   "id": "p191",
+   "en": "graduate from / in...",
+   "zh": "从……学校/专业毕业",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p192",
+   "en": "the standard of living = the living standard",
+   "zh": "生活水平",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p193",
+   "en": "rely on",
+   "zh": "依靠",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p194",
+   "en": "depend on",
+   "zh": "依靠；依赖；取决于",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p195",
+   "en": "on schedule",
+   "zh": "按时",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p196",
+   "en": "be scheduled to do",
+   "zh": "被安排；定于",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p197",
+   "en": "at an altitude of...",
+   "zh": "在……海拔处",
+   "cat": "dream",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p198",
+   "en": "attitude to/towards",
+   "zh": "对……的态度",
+   "cat": "dream",
+   "note": "注意与 altitude 海拔拼写区分",
+   "mastery": 0
+  },
+  {
+   "id": "p199",
+   "en": "put up...for the night",
+   "zh": "为……提供食宿过夜",
+   "cat": "quake",
+   "note": "露营单元",
+   "mastery": 0
+  },
+  {
+   "id": "p200",
+   "en": "a parcel of",
+   "zh": "一包",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p201",
+   "en": "go like clockwork",
+   "zh": "进展顺利",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p202",
+   "en": "cut into two parts",
+   "zh": "把……切成两部分",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p203",
+   "en": "full up",
+   "zh": "满了；吃饱了；没空位",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p204",
+   "en": "in fun / for fun",
+   "zh": "开玩笑地（in fun 表态度；for fun 图好玩）",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p205",
+   "en": "be full of fun",
+   "zh": "充满乐趣",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p206",
+   "en": "make fun of",
+   "zh": "取笑；嘲弄",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p207",
+   "en": "traffic accident",
+   "zh": "交通事故",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p208",
+   "en": "in ruins",
+   "zh": "严重受损；破败不堪",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p209",
+   "en": "dig out",
+   "zh": "掘出；发现",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p210",
+   "en": "a smelly gas",
+   "zh": "难闻的气味",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p211",
+   "en": "cut across",
+   "zh": "穿过；抄近路穿过",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p212",
+   "en": "think little of",
+   "zh": "对……不以为然；轻视",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p213",
+   "en": "think much/highly of",
+   "zh": "对……高度评价",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p214",
+   "en": "rise and fall",
+   "zh": "升升降降；起伏",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p215",
+   "en": "crack and burst",
+   "zh": "爆裂开来",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p216",
+   "en": "be asleep / fall asleep",
+   "zh": "睡着",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p217",
+   "en": "be/get injured",
+   "zh": "受伤",
+   "cat": "quake",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p218",
+   "en": "too nervous to eat",
+   "zh": "太紧张而不能吃下",
+   "cat": "quake",
+   "note": "too...to 结构",
+   "mastery": 0
+  },
+  {
+   "id": "p219",
+   "en": "join in",
+   "zh": "参加",
+   "cat": "general",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p220",
+   "en": "join sb. in doing sth.",
+   "zh": "和某人一起做某事",
+   "cat": "general",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p221",
+   "en": "leave out",
+   "zh": "省去；遗漏",
+   "cat": "general",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p222",
+   "en": "leave alone",
+   "zh": "不打扰；不理会",
+   "cat": "general",
+   "note": "",
+   "mastery": 0
+  },
+  {
+   "id": "p223",
+   "en": "come up",
+   "zh": "走近；上来；被提出",
+   "cat": "general",
+   "note": "come up with 提出（主意）",
+   "mastery": 0
+  }
+ ],
+ "roots": [
+  {
+   "id": "r1",
+   "name": "off",
+   "type": "核心词（副词/介词）",
+   "meaning": "离开；脱离；关闭",
+   "essence": "动词 + off = 让某物离开原来的位置或状态。put off 推迟（推到之后）、turn off 关闭（电流离开）",
+   "examples": [
     {
-      "id": "sentence",
-      "name": "句型·固定搭配"
+     "word": "put off",
+     "breakdown": "put 放 + off",
+     "zh": "推迟；延期"
     },
     {
-      "id": "come",
-      "name": "come 系列"
+     "word": "turn off",
+     "breakdown": "turn 转 + off",
+     "zh": "关掉（电流离开）"
     },
     {
-      "id": "care",
-      "name": "care 系列"
+     "word": "take off",
+     "breakdown": "take 拿 + off",
+     "zh": "脱下；起飞"
     },
     {
-      "id": "mind",
-      "name": "mind 系列"
+     "word": "see off",
+     "breakdown": "see 看 + off",
+     "zh": "送行（看着离开）"
     },
     {
-      "id": "give",
-      "name": "give 系列"
+     "word": "call off",
+     "breakdown": "call 喊 + off",
+     "zh": "取消（叫停）"
     },
     {
-      "id": "add",
-      "name": "add 系列"
-    },
-    {
-      "id": "get",
-      "name": "get 系列"
-    },
-    {
-      "id": "put",
-      "name": "put 系列"
-    },
-    {
-      "id": "agree",
-      "name": "agree 系列"
-    },
-    {
-      "id": "persuade",
-      "name": "persuade 系列"
-    },
-    {
-      "id": "outof",
-      "name": "out of 专题"
-    },
-    {
-      "id": "attitude",
-      "name": "情感·态度"
-    },
-    {
-      "id": "writing",
-      "name": "写作·书信"
-    },
-    {
-      "id": "dream",
-      "name": "梦想·行动"
-    },
-    {
-      "id": "quake",
-      "name": "地震单元"
-    },
-    {
-      "id": "general",
-      "name": "常用短语"
+     "word": "set off",
+     "breakdown": "set + off",
+     "zh": "出发；引爆"
     }
-  ],
-  "phrases": [
+   ],
+   "phrases": [
+    "put off",
+    "turn off"
+   ],
+   "note": "反义：on（保持接触/开启）"
+  },
+  {
+   "id": "r2",
+   "name": "-sive",
+   "type": "后缀",
+   "meaning": "形容词：……性的、倾向于……的",
+   "essence": "-sive = 动词词干 + ive，常由动词变来的形容词。aggressive→aggress（攻击）",
+   "examples": [
     {
-      "id": "p001",
-      "en": "due to",
-      "zh": "由于",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
+     "word": "aggressive",
+     "breakdown": "ag（向）+ gress（走）+ sive",
+     "zh": "好斗的；侵略性的"
     },
     {
-      "id": "p002",
-      "en": "thanks to",
-      "zh": "多亏；幸亏",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
+     "word": "passive",
+     "breakdown": "pass（忍受/被动）+ sive",
+     "zh": "被动的"
     },
     {
-      "id": "p003",
-      "en": "than ever before",
-      "zh": "比以往任何时候",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
+     "word": "expensive",
+     "breakdown": "ex（外）+ pens（花费）+ sive",
+     "zh": "昂贵的"
     },
     {
-      "id": "p004",
-      "en": "the former..., the latter...",
-      "zh": "前者……后者……",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
+     "word": "impressive",
+     "breakdown": "im（进入）+ press（压）+ sive",
+     "zh": "令人印象深刻的"
     },
     {
-      "id": "p005",
-      "en": "no such thing",
-      "zh": "没有这样的事",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
+     "word": "extensive",
+     "breakdown": "ex（向外）+ tend（伸展）+ sive",
+     "zh": "广泛的"
     },
     {
-      "id": "p006",
-      "en": "the same as",
-      "zh": "和……一样",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p007",
-      "en": "face to face",
-      "zh": "面对面",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p008",
-      "en": "heart to heart",
-      "zh": "坦诚地",
-      "cat": "sentence",
-      "note": "同类：face to face / shoulder to shoulder / back to back",
-      "mastery": 0
-    },
-    {
-      "id": "p009",
-      "en": "shoulder to shoulder",
-      "zh": "肩并肩地",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p010",
-      "en": "back to back",
-      "zh": "背靠背地",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p011",
-      "en": "a series of",
-      "zh": "一系列的",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p012",
-      "en": "on purpose",
-      "zh": "故意",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p013",
-      "en": "in order to",
-      "zh": "为了；目的是",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p014",
-      "en": "for the purpose of...",
-      "zh": "为了……的目的",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p015",
-      "en": "at dusk",
-      "zh": "在黄昏时刻",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p016",
-      "en": "by chance / by accident",
-      "zh": "偶然地；意外地",
-      "cat": "sentence",
-      "note": "原文误写为 be chance/accident，正确为 by",
-      "mastery": 0
-    },
-    {
-      "id": "p017",
-      "en": "the first time",
-      "zh": "第一次（作连词，接时间状语从句）",
-      "cat": "sentence",
-      "note": "The first time I saw her, ...",
-      "mastery": 0
-    },
-    {
-      "id": "p018",
-      "en": "for the first time",
-      "zh": "第一次（介词短语，不接从句）",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p019",
-      "en": "as usual",
-      "zh": "照常",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p020",
-      "en": "at midnight",
-      "zh": "在午夜",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p021",
-      "en": "as if",
-      "zh": "仿佛",
-      "cat": "sentence",
-      "note": "it seems as if + 句子 似乎、好像",
-      "mastery": 0
-    },
-    {
-      "id": "p022",
-      "en": "too...to...",
-      "zh": "太……以致不能",
-      "cat": "sentence",
-      "note": "too nervous to eat 太紧张而吃不下",
-      "mastery": 0
-    },
-    {
-      "id": "p023",
-      "en": "ever since",
-      "zh": "自从",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p024",
-      "en": "at present",
-      "zh": "现在；目前",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p025",
-      "en": "at the end of",
-      "zh": "在……末",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p026",
-      "en": "by the end of",
-      "zh": "到……末为止",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p027",
-      "en": "in the end",
-      "zh": "最后",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p028",
-      "en": "at an end",
-      "zh": "结束；终结",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p029",
-      "en": "right away",
-      "zh": "立刻；马上",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p030",
-      "en": "to one's surprise",
-      "zh": "令某人惊讶的是",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p031",
-      "en": "to tell (you) the truth",
-      "zh": "（跟你）说实话",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p032",
-      "en": "generally speaking",
-      "zh": "一般来说",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p033",
-      "en": "judging from",
-      "zh": "根据……判断",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p034",
-      "en": "to be exact",
-      "zh": "准确地说",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p035",
-      "en": "believe it or not",
-      "zh": "信不信由你",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p036",
-      "en": "in a word",
-      "zh": "总之",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p037",
-      "en": "in one's view / in one's opinion",
-      "zh": "依某人看来",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p038",
-      "en": "instead of",
-      "zh": "代替；而不是",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p039",
-      "en": "more than one",
-      "zh": "不止一个",
-      "cat": "sentence",
-      "note": "主语谓语用单数",
-      "mastery": 0
-    },
-    {
-      "id": "p040",
-      "en": "such as",
-      "zh": "例如",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p041",
-      "en": "such...as...",
-      "zh": "像……这样的",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p042",
-      "en": "a (great) number of",
-      "zh": "许多；大量的",
-      "cat": "sentence",
-      "note": "修饰可数名词复数",
-      "mastery": 0
-    },
-    {
-      "id": "p043",
-      "en": "the number of",
-      "zh": "……的数目",
-      "cat": "sentence",
-      "note": "作主语时谓语用单数",
-      "mastery": 0
-    },
-    {
-      "id": "p044",
-      "en": "one third / two thirds",
-      "zh": "三分之一 / 三分之二",
-      "cat": "sentence",
-      "note": "分子>1 时分母加 s",
-      "mastery": 0
-    },
-    {
-      "id": "p045",
-      "en": "thousands of",
-      "zh": "数以千计的",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p046",
-      "en": "because of",
-      "zh": "因为；由于",
-      "cat": "sentence",
-      "note": "后接名词/代词/动名词",
-      "mastery": 0
-    },
-    {
-      "id": "p047",
-      "en": "be based on",
-      "zh": "以……为基础/根据",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p048",
-      "en": "be expected to do",
-      "zh": "被期待做某事；应该做某事",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p049",
-      "en": "hold on",
-      "zh": "坚持；别挂断（电话）",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p050",
-      "en": "in...direction / in the direction of",
-      "zh": "朝……方向",
-      "cat": "sentence",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p051",
-      "en": "in all directions",
-      "zh": "朝四面八方",
-      "cat": "sentence",
-      "note": "= in every direction",
-      "mastery": 0
-    },
-    {
-      "id": "p052",
-      "en": "come to",
-      "zh": "来到；谈到；共计",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p053",
-      "en": "come on",
-      "zh": "加油；快点",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p054",
-      "en": "come about",
-      "zh": "发生；产生",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p055",
-      "en": "come across",
-      "zh": "偶遇；碰到",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p056",
-      "en": "come out",
-      "zh": "出来；出版；开花",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p057",
-      "en": "come up with",
-      "zh": "提出（想法/办法）",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p058",
-      "en": "come to life / come to oneself",
-      "zh": "苏醒",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p059",
-      "en": "come out of the cracks",
-      "zh": "从裂缝里冒出",
-      "cat": "come",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p060",
-      "en": "care about",
-      "zh": "关心",
-      "cat": "care",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p061",
-      "en": "care for",
-      "zh": "照顾",
-      "cat": "care",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p062",
-      "en": "take care",
-      "zh": "注意；保重",
-      "cat": "care",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p063",
-      "en": "take care of",
-      "zh": "负责；照顾",
-      "cat": "care",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p064",
-      "en": "with care",
-      "zh": "当心；仔细地",
-      "cat": "care",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p065",
-      "en": "care to do sth.",
-      "zh": "愿意做某事",
-      "cat": "care",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p066",
-      "en": "be concerned about / for...",
-      "zh": "担心……；关心……",
-      "cat": "care",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p067",
-      "en": "change one's mind",
-      "zh": "改变主意",
-      "cat": "mind",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p068",
-      "en": "make up one's mind to do sth.",
-      "zh": "下决心做某事",
-      "cat": "mind",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p069",
-      "en": "read one's mind",
-      "zh": "看出某人的心思",
-      "cat": "mind",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p070",
-      "en": "speak one's mind",
-      "zh": "说出心里话",
-      "cat": "mind",
-      "note": "原文 Spead 为笔误",
-      "mastery": 0
-    },
-    {
-      "id": "p071",
-      "en": "keep sth. in mind",
-      "zh": "记住某事",
-      "cat": "mind",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p072",
-      "en": "lose one's mind",
-      "zh": "失去理智",
-      "cat": "mind",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p073",
-      "en": "give in",
-      "zh": "投降；屈服",
-      "cat": "give",
-      "note": "对比：hand in = turn in 提交",
-      "mastery": 0
-    },
-    {
-      "id": "p074",
-      "en": "hand in / turn in",
-      "zh": "提交",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p075",
-      "en": "give up",
-      "zh": "放弃",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p076",
-      "en": "give away",
-      "zh": "赠送；泄露",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p077",
-      "en": "give off",
-      "zh": "发出（气味）",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p078",
-      "en": "give back",
-      "zh": "归还；使恢复",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p079",
-      "en": "give out",
-      "zh": "公布；耗尽；发出（光/热/气味等）",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p080",
-      "en": "give over",
-      "zh": "移交",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p081",
-      "en": "congratulate sb. on sth.",
-      "zh": "就某事祝贺某人",
-      "cat": "give",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p082",
-      "en": "add up",
-      "zh": "合计；算账",
-      "cat": "add",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p083",
-      "en": "add...to...",
-      "zh": "把……加到……",
-      "cat": "add",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p084",
-      "en": "add up to",
-      "zh": "共计……；意味着……",
-      "cat": "add",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p085",
-      "en": "get through",
-      "zh": "通过；用完；接通；被理解；做完",
-      "cat": "get",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p086",
-      "en": "break through",
-      "zh": "突破",
-      "cat": "get",
-      "note": "原文误写 Bread through",
-      "mastery": 0
-    },
-    {
-      "id": "p087",
-      "en": "go through",
-      "zh": "经历；经受；穿过；审查；通过；用尽",
-      "cat": "get",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p088",
-      "en": "get along with",
-      "zh": "与……相处",
-      "cat": "get",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p089",
-      "en": "get on/along with",
-      "zh": "进展；与……相处",
-      "cat": "get",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p090",
-      "en": "get away with",
-      "zh": "做（坏事）而不受惩罚；携带潜逃",
-      "cat": "get",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p091",
-      "en": "get away from",
-      "zh": "摆脱；逃避",
-      "cat": "get",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p092",
-      "en": "get across",
-      "zh": "被理解；把……讲清楚",
-      "cat": "get",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p093",
-      "en": "get down to doing sth.",
-      "zh": "开始；着手做某事",
-      "cat": "get",
-      "note": "to 是介词，后接 doing",
-      "mastery": 0
-    },
-    {
-      "id": "p094",
-      "en": "put up",
-      "zh": "建造；搭起；举起；张贴；为……提供食宿",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p095",
-      "en": "put up the tent",
-      "zh": "支起帐篷",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p096",
-      "en": "put down",
-      "zh": "放下；记下",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p097",
-      "en": "set aside",
-      "zh": "放在一旁；存储",
-      "cat": "put",
-      "note": "原文 out oside 为笔误，应为 set aside",
-      "mastery": 0
-    },
-    {
-      "id": "p098",
-      "en": "put back",
-      "zh": "放回；送回；拨回（钟表指针）",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p099",
-      "en": "put forward",
-      "zh": "向前移；提出；拨快（钟表）",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p100",
-      "en": "put off",
-      "zh": "延期；推迟",
-      "cat": "put",
-      "note": "off = 离开 → 推到后面去；off 还表离开：turn off 关掉",
-      "mastery": 0
-    },
-    {
-      "id": "p101",
-      "en": "put away",
-      "zh": "收拾；处理",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p102",
-      "en": "put out",
-      "zh": "熄灭",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p103",
-      "en": "put up with",
-      "zh": "忍受",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p104",
-      "en": "put on",
-      "zh": "穿上；盖上；放上",
-      "cat": "put",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p105",
-      "en": "agree with",
-      "zh": "同意（某人/观点）",
-      "cat": "agree",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p106",
-      "en": "agree with sb.",
-      "zh": "同意某人",
-      "cat": "agree",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p107",
-      "en": "agree to",
-      "zh": "同意（他人观点、计划等）",
-      "cat": "agree",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p108",
-      "en": "agree on",
-      "zh": "就……达成一致",
-      "cat": "agree",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p109",
-      "en": "disagree with...",
-      "zh": "与……不一致；不符合",
-      "cat": "agree",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p110",
-      "en": "disagree with sb. on/about sth.",
-      "zh": "在某事上与某人不一致",
-      "cat": "agree",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p111",
-      "en": "sth. disagree with sb.",
-      "zh": "某事（食物/气候）不适合某人",
-      "cat": "agree",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p112",
-      "en": "persuade sb. (not) to do sth.",
-      "zh": "说服某人（不）做某事",
-      "cat": "persuade",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p113",
-      "en": "persuade sb. into doing sth.",
-      "zh": "说服某人做某事（成功说服）",
-      "cat": "persuade",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p114",
-      "en": "persuade sb. out of doing sth.",
-      "zh": "说服某人不做某事",
-      "cat": "persuade",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p115",
-      "en": "persuade sb. of sth.",
-      "zh": "使某人相信某事",
-      "cat": "persuade",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p116",
-      "en": "persuade sb. that 从句",
-      "zh": "使某人相信……",
-      "cat": "persuade",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p117",
-      "en": "try to persuade sb. = advise sb.",
-      "zh": "劝说（不一定成功）",
-      "cat": "persuade",
-      "note": "advise 只是劝，persuade 是劝成",
-      "mastery": 0
-    },
-    {
-      "id": "p118",
-      "en": "out of the room",
-      "zh": "从……里面出来",
-      "cat": "outof",
-      "note": "come out of the room 走出房间",
-      "mastery": 0
-    },
-    {
-      "id": "p119",
-      "en": "out of money",
-      "zh": "没钱（缺乏、没有了）",
-      "cat": "outof",
-      "note": "用法2：缺乏、没有",
-      "mastery": 0
-    },
-    {
-      "id": "p120",
-      "en": "out of control",
-      "zh": "失控（在……范围之外）",
-      "cat": "outof",
-      "note": "用法3",
-      "mastery": 0
-    },
-    {
-      "id": "p121",
-      "en": "3 out of 10",
-      "zh": "十分之三（比例；从总数里）",
-      "cat": "outof",
-      "note": "用法4",
-      "mastery": 0
-    },
-    {
-      "id": "p122",
-      "en": "out of curiosity",
-      "zh": "出于好奇（出于原因）",
-      "cat": "outof",
-      "note": "用法5",
-      "mastery": 0
-    },
-    {
-      "id": "p123",
-      "en": "out of danger",
-      "zh": "脱离危险（脱离状态）",
-      "cat": "outof",
-      "note": "用法6；反义：into / in",
-      "mastery": 0
-    },
-    {
-      "id": "p124",
-      "en": "out of date",
-      "zh": "过时",
-      "cat": "outof",
-      "note": "常见短语",
-      "mastery": 0
-    },
-    {
-      "id": "p125",
-      "en": "out of stock",
-      "zh": "缺货",
-      "cat": "outof",
-      "note": "常见短语",
-      "mastery": 0
-    },
-    {
-      "id": "p126",
-      "en": "calm down",
-      "zh": "使平静下来",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p127",
-      "en": "be crazy about",
-      "zh": "对……疯狂/着迷",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p128",
-      "en": "laugh at",
-      "zh": "嘲笑",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p129",
-      "en": "no longer = not...any longer",
-      "zh": "不再",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p130",
-      "en": "suffer from",
-      "zh": "遭受；患病",
-      "cat": "attitude",
-      "note": "原文 form 为笔误",
-      "mastery": 0
-    },
-    {
-      "id": "p131",
-      "en": "recover from",
-      "zh": "从……中恢复；康复",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p132",
-      "en": "be/get tired of",
-      "zh": "厌倦；对……厌烦",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p133",
-      "en": "be tired from/with",
-      "zh": "因……而疲惫",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p134",
-      "en": "tired out",
-      "zh": "疲倦不堪",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p135",
-      "en": "pack up",
-      "zh": "装箱；打包；停止工作",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p136",
-      "en": "fall in love with sb.",
-      "zh": "爱上某人",
-      "cat": "attitude",
-      "note": "原文 fill in love 为笔误",
-      "mastery": 0
-    },
-    {
-      "id": "p137",
-      "en": "receive a letter from sb.",
-      "zh": "收到某人的来信",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p138",
-      "en": "receive a letter for sb.",
-      "zh": "替某人收一封信",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p139",
-      "en": "ignore sb./sth.",
-      "zh": "不理睬某人/某事",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p140",
-      "en": "happen to do sth.",
-      "zh": "碰巧做某事",
-      "cat": "attitude",
-      "note": "(sb) happen to do sth",
-      "mastery": 0
-    },
-    {
-      "id": "p141",
-      "en": "burst into tears / burst out crying",
-      "zh": "突然大哭",
-      "cat": "attitude",
-      "note": "burst into tears = burst out crying，两者结构不同",
-      "mastery": 0
-    },
-    {
-      "id": "p142",
-      "en": "be dressed in",
-      "zh": "穿着",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p143",
-      "en": "stay awake",
-      "zh": "醒着；睡不着",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p144",
-      "en": "fall behind",
-      "zh": "落后",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p145",
-      "en": "stay behind",
-      "zh": "留下",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p146",
-      "en": "can hardly wait to do sth. / can't wait to do sth.",
-      "zh": "迫不及待做某事",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p147",
-      "en": "feel like doing sth.",
-      "zh": "想要做某事；喜欢做",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p148",
-      "en": "insist on doing sth.",
-      "zh": "坚持做某事",
-      "cat": "attitude",
-      "note": "原文 insist to do 有误；insist on doing / insist that sb. (should) do",
-      "mastery": 0
-    },
-    {
-      "id": "p149",
-      "en": "insist that sb. (should) do",
-      "zh": "坚决要求（虚拟语气）",
-      "cat": "attitude",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p150",
-      "en": "written English",
-      "zh": "写作；书面英语",
-      "cat": "writing",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p151",
-      "en": "write to sb.",
-      "zh": "给……写信",
-      "cat": "writing",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p152",
-      "en": "spoken English",
-      "zh": "口语",
-      "cat": "writing",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p153",
-      "en": "oral English",
-      "zh": "口语",
-      "cat": "writing",
-      "note": "= spoken English",
-      "mastery": 0
-    },
-    {
-      "id": "p154",
-      "en": "settle down",
-      "zh": "定居下来",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p155",
-      "en": "set down",
-      "zh": "记下",
-      "cat": "dream",
-      "note": "对比 set aside 放在一旁",
-      "mastery": 0
-    },
-    {
-      "id": "p156",
-      "en": "make voyages",
-      "zh": "进行航海",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p157",
-      "en": "go on a voyage",
-      "zh": "出航；出国旅行",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p158",
-      "en": "be on a voyage",
-      "zh": "在航行",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p159",
-      "en": "take an active part in",
-      "zh": "积极参加",
-      "cat": "dream",
-      "note": "原文 a active 为笔误",
-      "mastery": 0
-    },
-    {
-      "id": "p160",
-      "en": "be active in",
-      "zh": "在……方面很积极活跃",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p161",
-      "en": "devote sth. to (doing) sth.",
-      "zh": "把……奉献给；致力于",
-      "cat": "dream",
-      "note": "to 是介词",
-      "mastery": 0
-    },
-    {
-      "id": "p162",
-      "en": "fight for",
-      "zh": "为……而战",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p163",
-      "en": "fight against",
-      "zh": "反对……而战",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p164",
-      "en": "fight with",
-      "zh": "与……并肩作战",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p165",
-      "en": "be in prison",
-      "zh": "在监狱被监禁（表状态）",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p166",
-      "en": "put sb. in prison",
-      "zh": "把某人关进监狱（表动作）",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p167",
-      "en": "break prison",
-      "zh": "越狱",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p168",
-      "en": "be generous to sb.",
-      "zh": "对某人大方",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p169",
-      "en": "be generous with sth.",
-      "zh": "在某事上大方",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p170",
-      "en": "play a part/role in",
-      "zh": "在……中起作用；扮演一个角色",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p171",
-      "en": "play an important role/part in",
-      "zh": "在……中起重要作用",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p172",
-      "en": "play a leading role/part",
-      "zh": "起主要作用；扮演主角",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p173",
-      "en": "play the role/part of (sb.)",
-      "zh": "（在剧中）扮演（某人）角色",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p174",
-      "en": "make sense",
-      "zh": "讲得通；有意义；合理",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p175",
-      "en": "make sense of",
-      "zh": "了解……的意义",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p176",
-      "en": "at/under one's command",
-      "zh": "奉某人之命；由……指挥",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p177",
-      "en": "have a command of",
-      "zh": "掌握",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p178",
-      "en": "request for",
-      "zh": "要求；请求；需要",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p179",
-      "en": "request sth.",
-      "zh": "要求……；请求……",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p180",
-      "en": "request sb. to do sth.",
-      "zh": "要求某人做某事",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p181",
-      "en": "request that sb. (should) do",
-      "zh": "要求某人做……（虚拟语气）",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p182",
-      "en": "dream about/of doing sth.",
-      "zh": "梦想做某事",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p183",
-      "en": "dream a ... dream",
-      "zh": "做一个……的梦",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p184",
-      "en": "realize one's dream",
-      "zh": "实现梦想（梦想变成现实）",
-      "cat": "dream",
-      "note": "realize = 使成真",
-      "mastery": 0
-    },
-    {
-      "id": "p185",
-      "en": "achieve one's dream",
-      "zh": "实现梦想（通过努力达成）",
-      "cat": "dream",
-      "note": "同义：make one's dream come true",
-      "mastery": 0
-    },
-    {
-      "id": "p186",
-      "en": "determine to do sth.",
-      "zh": "下决心做某事",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p187",
-      "en": "determine sb. to do sth.",
-      "zh": "使某人下定决心做某事",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p188",
-      "en": "be interested in",
-      "zh": "对……感兴趣",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p189",
-      "en": "get sb. interested in",
-      "zh": "使某人对……感兴趣",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p190",
-      "en": "prefer doing A to doing B",
-      "zh": "比起做B，更喜欢做A",
-      "cat": "dream",
-      "note": "I prefer reading to watching TV.",
-      "mastery": 0
-    },
-    {
-      "id": "p191",
-      "en": "graduate from / in...",
-      "zh": "从……学校/专业毕业",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p192",
-      "en": "the standard of living = the living standard",
-      "zh": "生活水平",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p193",
-      "en": "rely on",
-      "zh": "依靠",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p194",
-      "en": "depend on",
-      "zh": "依靠；依赖；取决于",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p195",
-      "en": "on schedule",
-      "zh": "按时",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p196",
-      "en": "be scheduled to do",
-      "zh": "被安排；定于",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p197",
-      "en": "at an altitude of...",
-      "zh": "在……海拔处",
-      "cat": "dream",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p198",
-      "en": "attitude to/towards",
-      "zh": "对……的态度",
-      "cat": "dream",
-      "note": "注意与 altitude 海拔拼写区分",
-      "mastery": 0
-    },
-    {
-      "id": "p199",
-      "en": "put up...for the night",
-      "zh": "为……提供食宿过夜",
-      "cat": "quake",
-      "note": "露营单元",
-      "mastery": 0
-    },
-    {
-      "id": "p200",
-      "en": "a parcel of",
-      "zh": "一包",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p201",
-      "en": "go like clockwork",
-      "zh": "进展顺利",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p202",
-      "en": "cut into two parts",
-      "zh": "把……切成两部分",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p203",
-      "en": "full up",
-      "zh": "满了；吃饱了；没空位",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p204",
-      "en": "in fun / for fun",
-      "zh": "开玩笑地（in fun 表态度；for fun 图好玩）",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p205",
-      "en": "be full of fun",
-      "zh": "充满乐趣",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p206",
-      "en": "make fun of",
-      "zh": "取笑；嘲弄",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p207",
-      "en": "traffic accident",
-      "zh": "交通事故",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p208",
-      "en": "in ruins",
-      "zh": "严重受损；破败不堪",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p209",
-      "en": "dig out",
-      "zh": "掘出；发现",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p210",
-      "en": "a smelly gas",
-      "zh": "难闻的气味",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p211",
-      "en": "cut across",
-      "zh": "穿过；抄近路穿过",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p212",
-      "en": "think little of",
-      "zh": "对……不以为然；轻视",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p213",
-      "en": "think much/highly of",
-      "zh": "对……高度评价",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p214",
-      "en": "rise and fall",
-      "zh": "升升降降；起伏",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p215",
-      "en": "crack and burst",
-      "zh": "爆裂开来",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p216",
-      "en": "be asleep / fall asleep",
-      "zh": "睡着",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p217",
-      "en": "be/get injured",
-      "zh": "受伤",
-      "cat": "quake",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p218",
-      "en": "too nervous to eat",
-      "zh": "太紧张而不能吃下",
-      "cat": "quake",
-      "note": "too...to 结构",
-      "mastery": 0
-    },
-    {
-      "id": "p219",
-      "en": "join in",
-      "zh": "参加",
-      "cat": "general",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p220",
-      "en": "join sb. in doing sth.",
-      "zh": "和某人一起做某事",
-      "cat": "general",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p221",
-      "en": "leave out",
-      "zh": "省去；遗漏",
-      "cat": "general",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p222",
-      "en": "leave alone",
-      "zh": "不打扰；不理会",
-      "cat": "general",
-      "note": "",
-      "mastery": 0
-    },
-    {
-      "id": "p223",
-      "en": "come up",
-      "zh": "走近；上来；被提出",
-      "cat": "general",
-      "note": "come up with 提出（主意）",
-      "mastery": 0
+     "word": "persuasive",
+     "breakdown": "persuade（说服）+ sive",
+     "zh": "有说服力的"
     }
-  ],
-  "roots": [
+   ],
+   "phrases": [],
+   "note": "同族：-tive（active 积极、creative 有创造力）"
+  },
+  {
+   "id": "r3",
+   "name": "bene-",
+   "type": "词根",
+   "meaning": "好、善",
+   "essence": "来自拉丁语 bonus（好）。凡 bene 开头的词，核心意思都是“好”",
+   "examples": [
     {
-      "id": "r1",
-      "name": "off",
-      "type": "核心词（副词/介词）",
-      "meaning": "离开；脱离；关闭",
-      "essence": "动词 + off = 让某物离开原来的位置或状态。put off 推迟（推到之后）、turn off 关闭（电流离开）",
-      "examples": [
-        {
-          "word": "put off",
-          "breakdown": "put 放 + off",
-          "zh": "推迟；延期"
-        },
-        {
-          "word": "turn off",
-          "breakdown": "turn 转 + off",
-          "zh": "关掉（电流离开）"
-        },
-        {
-          "word": "take off",
-          "breakdown": "take 拿 + off",
-          "zh": "脱下；起飞"
-        },
-        {
-          "word": "see off",
-          "breakdown": "see 看 + off",
-          "zh": "送行（看着离开）"
-        },
-        {
-          "word": "call off",
-          "breakdown": "call 喊 + off",
-          "zh": "取消（叫停）"
-        },
-        {
-          "word": "set off",
-          "breakdown": "set + off",
-          "zh": "出发；引爆"
-        }
-      ],
-      "phrases": [
-        "put off",
-        "turn off"
-      ],
-      "note": "反义：on（保持接触/开启）"
+     "word": "benefactor",
+     "breakdown": "bene（好）+ fac（做）+ tor（人）→ 做好事的人",
+     "zh": "恩人；捐助者"
     },
     {
-      "id": "r2",
-      "name": "-sive",
-      "type": "后缀",
-      "meaning": "形容词：……性的、倾向于……的",
-      "essence": "-sive = 动词词干 + ive，常由动词变来的形容词。aggressive→aggress（攻击）",
-      "examples": [
-        {
-          "word": "aggressive",
-          "breakdown": "ag（向）+ gress（走）+ sive",
-          "zh": "好斗的；侵略性的"
-        },
-        {
-          "word": "passive",
-          "breakdown": "pass（忍受/被动）+ sive",
-          "zh": "被动的"
-        },
-        {
-          "word": "expensive",
-          "breakdown": "ex（外）+ pens（花费）+ sive",
-          "zh": "昂贵的"
-        },
-        {
-          "word": "impressive",
-          "breakdown": "im（进入）+ press（压）+ sive",
-          "zh": "令人印象深刻的"
-        },
-        {
-          "word": "extensive",
-          "breakdown": "ex（向外）+ tend（伸展）+ sive",
-          "zh": "广泛的"
-        },
-        {
-          "word": "persuasive",
-          "breakdown": "persuade（说服）+ sive",
-          "zh": "有说服力的"
-        }
-      ],
-      "phrases": [],
-      "note": "同族：-tive（active 积极、creative 有创造力）"
+     "word": "benefit",
+     "breakdown": "bene（好）+ fit（做）→ 做出的好事",
+     "zh": "好处；利益"
     },
     {
-      "id": "r3",
-      "name": "bene-",
-      "type": "词根",
-      "meaning": "好、善",
-      "essence": "来自拉丁语 bonus（好）。凡 bene 开头的词，核心意思都是“好”",
-      "examples": [
-        {
-          "word": "benefactor",
-          "breakdown": "bene（好）+ fac（做）+ tor（人）→ 做好事的人",
-          "zh": "恩人；捐助者"
-        },
-        {
-          "word": "benefit",
-          "breakdown": "bene（好）+ fit（做）→ 做出的好事",
-          "zh": "好处；利益"
-        },
-        {
-          "word": "benevolent",
-          "breakdown": "bene（好）+ vol（意愿）→ 好意的",
-          "zh": "仁慈的"
-        },
-        {
-          "word": "benign",
-          "breakdown": "bene（好）+ gn（出生）→ 天性和善",
-          "zh": "和善的；（肿瘤）良性的"
-        }
-      ],
-      "phrases": [],
-      "note": "反义词根：mal-（坏），如 malfunction 故障"
+     "word": "benevolent",
+     "breakdown": "bene（好）+ vol（意愿）→ 好意的",
+     "zh": "仁慈的"
     },
     {
-      "id": "r4",
-      "name": "fac / fect / fic / fit",
-      "type": "词根",
-      "meaning": "做、行动",
-      "essence": "同一词根的不同变形（拉丁语 facere 做）。认识这个家族，几十个单词一串全解",
-      "examples": [
-        {
-          "word": "factory",
-          "breakdown": "fact（做）+ ory（地方）→ 做东西的地方",
-          "zh": "工厂"
-        },
-        {
-          "word": "perfect",
-          "breakdown": "per（完全）+ fect（做）→ 做得完全",
-          "zh": "完美的"
-        },
-        {
-          "word": "efficient",
-          "breakdown": "ef（出）+ fic（做）→ 做得出效果",
-          "zh": "高效的"
-        },
-        {
-          "word": "facilitate",
-          "breakdown": "fac（做）+ it + ate（使）→ 使容易做",
-          "zh": "促进；使便利"
-        },
-        {
-          "word": "affect",
-          "breakdown": "af（向）+ fect（做）→ 向……施加作用",
-          "zh": "影响"
-        },
-        {
-          "word": "benefactor",
-          "breakdown": "bene（好）+ fac（做）+ tor（人）",
-          "zh": "恩人"
-        }
-      ],
-      "phrases": [],
-      "note": "兄弟词根：fect（perfect）、fic（efficient）、fit（benefit）"
-    },
-    {
-      "id": "r5",
-      "name": "spect",
-      "type": "词根",
-      "meaning": "看",
-      "essence": "拉丁语 spectare 看。spect 出现 = 和“看”有关",
-      "examples": [
-        {
-          "word": "inspect",
-          "breakdown": "in（向内）+ spect（看）",
-          "zh": "检查；视察"
-        },
-        {
-          "word": "respect",
-          "breakdown": "re（反复）+ spect（看）→ 反复看、重视",
-          "zh": "尊重"
-        },
-        {
-          "word": "prospect",
-          "breakdown": "pro（向前）+ spect（看）→ 向前看",
-          "zh": "前景；展望"
-        },
-        {
-          "word": "spectator",
-          "breakdown": "spect（看）+ ator（人）",
-          "zh": "观众"
-        }
-      ],
-      "phrases": [],
-      "note": "同族：look 系短语 look up / look into"
-    },
-    {
-      "id": "r6",
-      "name": "dict",
-      "type": "词根",
-      "meaning": "说",
-      "essence": "拉丁语 dicere 说。dict = 说",
-      "examples": [
-        {
-          "word": "predict",
-          "breakdown": "pre（先）+ dict（说）→ 先说",
-          "zh": "预言"
-        },
-        {
-          "word": "dictionary",
-          "breakdown": "dict（说）+ ionary",
-          "zh": "字典（收集“说法”）"
-        },
-        {
-          "word": "dictate",
-          "breakdown": "dict（说）+ ate",
-          "zh": "口述；命令"
-        },
-        {
-          "word": "contradict",
-          "breakdown": "contra（相反）+ dict（说）→ 反着说",
-          "zh": "反驳；矛盾"
-        }
-      ],
-      "phrases": [],
-      "note": ""
-    },
-    {
-      "id": "r7",
-      "name": "ject",
-      "type": "词根",
-      "meaning": "扔、投",
-      "essence": "拉丁语 jacere 扔。ject = 扔出去",
-      "examples": [
-        {
-          "word": "reject",
-          "breakdown": "re（回）+ ject（扔）→ 扔回来",
-          "zh": "拒绝"
-        },
-        {
-          "word": "object",
-          "breakdown": "ob（反）+ ject（扔）→ 投向对面",
-          "zh": "反对；物体"
-        },
-        {
-          "word": "inject",
-          "breakdown": "in（内）+ ject（扔）→ 扔进去",
-          "zh": "注射；注入"
-        },
-        {
-          "word": "project",
-          "breakdown": "pro（向前）+ ject（扔）→ 向前投掷",
-          "zh": "投射；项目"
-        }
-      ],
-      "phrases": [],
-      "note": ""
-    },
-    {
-      "id": "r8",
-      "name": "port",
-      "type": "词根",
-      "meaning": "搬运；携带",
-      "essence": "拉丁语 portare 搬运。port = 拿、运",
-      "examples": [
-        {
-          "word": "import",
-          "breakdown": "im（进入）+ port（运）",
-          "zh": "进口"
-        },
-        {
-          "word": "export",
-          "breakdown": "ex（外）+ port（运）",
-          "zh": "出口"
-        },
-        {
-          "word": "transport",
-          "breakdown": "trans（跨越）+ port（运）",
-          "zh": "运输"
-        },
-        {
-          "word": "portable",
-          "breakdown": "port（携带）+ able（可……的）",
-          "zh": "便携的"
-        }
-      ],
-      "phrases": [],
-      "note": ""
-    },
-    {
-      "id": "r9",
-      "name": "pre-",
-      "type": "前缀",
-      "meaning": "前；预先",
-      "essence": "pre 开头 = 在……之前。常见于“提前做某事”",
-      "examples": [
-        {
-          "word": "predict",
-          "breakdown": "pre（先）+ dict（说）",
-          "zh": "预言"
-        },
-        {
-          "word": "prevent",
-          "breakdown": "pre（提前）+ vent（来）→ 提前到场拦截",
-          "zh": "阻止"
-        },
-        {
-          "word": "preview",
-          "breakdown": "pre（先）+ view（看）",
-          "zh": "预习；预览"
-        },
-        {
-          "word": "prepare",
-          "breakdown": "pre（预先）+ pare（备）",
-          "zh": "准备"
-        }
-      ],
-      "phrases": [],
-      "note": "反义：post-（后），如 postpone 推迟"
-    },
-    {
-      "id": "r10",
-      "name": "re-",
-      "type": "前缀",
-      "meaning": "再；回；返回",
-      "essence": "re 开头 = 再次 / 往回",
-      "examples": [
-        {
-          "word": "repeat",
-          "breakdown": "re（再）+ peat",
-          "zh": "重复"
-        },
-        {
-          "word": "return",
-          "breakdown": "re（回）+ turn（转）→ 转回去",
-          "zh": "返回；归还"
-        },
-        {
-          "word": "review",
-          "breakdown": "re（再）+ view（看）→ 再看一遍",
-          "zh": "复习"
-        },
-        {
-          "word": "rebuild",
-          "breakdown": "re（再）+ build（建）",
-          "zh": "重建"
-        }
-      ],
-      "phrases": [],
-      "note": ""
-    },
-    {
-      "id": "r11",
-      "name": "-tion",
-      "type": "后缀",
-      "meaning": "名词：行为、行为的结果",
-      "essence": "动词 + tion 变名词，读作 /ʃən/",
-      "examples": [
-        {
-          "word": "action",
-          "breakdown": "act（行动）+ ion",
-          "zh": "行动"
-        },
-        {
-          "word": "education",
-          "breakdown": "educate（教育）+ ion",
-          "zh": "教育"
-        },
-        {
-          "word": "creation",
-          "breakdown": "create（创造）+ ion",
-          "zh": "创造"
-        },
-        {
-          "word": "protection",
-          "breakdown": "protect（保护）+ ion",
-          "zh": "保护"
-        }
-      ],
-      "phrases": [],
-      "note": "兄弟后缀：-sion、-ation"
-    },
-    {
-      "id": "r12",
-      "name": "con- / com- / co-",
-      "type": "前缀",
-      "meaning": "共同；一起",
-      "essence": "con/com/co 开头 = 大家一起做",
-      "examples": [
-        {
-          "word": "connect",
-          "breakdown": "con（共同）+ nect（连）→ 连在一起",
-          "zh": "连接"
-        },
-        {
-          "word": "combine",
-          "breakdown": "com（共同）+ bine（二）→ 合二为一",
-          "zh": "结合"
-        },
-        {
-          "word": "communicate",
-          "breakdown": "com（共同）+ munic（共享）",
-          "zh": "交流；沟通"
-        },
-        {
-          "word": "cooperate",
-          "breakdown": "co（共同）+ operate（操作）",
-          "zh": "合作"
-        }
-      ],
-      "phrases": [],
-      "note": ""
-    },
-    {
-      "id": "r13",
-      "name": "vent / ven",
-      "type": "词根",
-      "meaning": "来、发生",
-      "essence": "拉丁语 venire 来。vent 出现 = “来”或“事情发生”",
-      "examples": [
-        [
-          "prevent",
-          "pre（提前）+ vent（来）→ 提前来挡",
-          "阻止"
-        ],
-        [
-          "event",
-          "e（出）+ vent（来）→ 出来的事",
-          "事件"
-        ],
-        [
-          "invent",
-          "in（在里面）+ vent（来）→ 心里想出来",
-          "发明"
-        ],
-        [
-          "avenue",
-          "a + ven（来）+ ue → 来的路",
-          "大街"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r14",
-      "name": "mot / mov",
-      "type": "词根",
-      "meaning": "动",
-      "essence": "拉丁语 movere 移动。mot/mov = 动",
-      "examples": [
-        [
-          "motion",
-          "mot（动）+ ion（名词）",
-          "运动；动作"
-        ],
-        [
-          "promote",
-          "pro（向前）+ mot（动）→ 使向前动",
-          "促进；晋升"
-        ],
-        [
-          "remove",
-          "re（离开）+ mov（动）→ 移走",
-          "移除"
-        ],
-        [
-          "emotion",
-          "e（出）+ mot（动）+ ion → 心里的动静",
-          "情绪"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r15",
-      "name": "press",
-      "type": "词根",
-      "meaning": "压",
-      "essence": "press 压。press 在词中 = 压",
-      "examples": [
-        [
-          "pressure",
-          "press（压）+ ure（名词）",
-          "压力"
-        ],
-        [
-          "impress",
-          "im（进入）+ press（压）→ 压进心里",
-          "使印象深刻"
-        ],
-        [
-          "express",
-          "ex（向外）+ press（压）→ 压出来",
-          "表达"
-        ],
-        [
-          "depress",
-          "de（向下）+ press（压）→ 压下去",
-          "使沮丧"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r16",
-      "name": "duc / duct",
-      "type": "词根",
-      "meaning": "引导",
-      "essence": "拉丁语 ducere 引导。duc/duct = 引、带",
-      "examples": [
-        [
-          "educate",
-          "e（向外）+ duc（引导）→ 把潜力引出来",
-          "教育"
-        ],
-        [
-          "introduce",
-          "intro（向内）+ duc（引导）→ 引进来",
-          "介绍"
-        ],
-        [
-          "product",
-          "pro（向前）+ duct（引导）→ 引出来的东西",
-          "产品"
-        ],
-        [
-          "reduce",
-          "re（往回）+ duct（引导）→ 往回引",
-          "减少"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r17",
-      "name": "gress",
-      "type": "词根",
-      "meaning": "走",
-      "essence": "拉丁语 gradi 走。gress = 走",
-      "examples": [
-        [
-          "progress",
-          "pro（向前）+ gress（走）→ 向前走",
-          "进步"
-        ],
-        [
-          "aggressive",
-          "ag（向）+ gress（走）+ sive → 向人走去",
-          "好斗的"
-        ],
-        [
-          "congress",
-          "con（共同）+ gress（走）→ 走到一起",
-          "国会；大会"
-        ],
-        [
-          "regress",
-          "re（往回）+ gress（走）",
-          "退步"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r18",
-      "name": "struct",
-      "type": "词根",
-      "meaning": "建造",
-      "essence": "拉丁语 struere 建造。struct = 建",
-      "examples": [
-        [
-          "structure",
-          "struct（建）+ ure（名词）",
-          "结构"
-        ],
-        [
-          "construct",
-          "con（共同）+ struct（建）",
-          "建造"
-        ],
-        [
-          "instruct",
-          "in（进入）+ struct（建）→ 把知识建进脑子",
-          "教导"
-        ],
-        [
-          "destroy",
-          "de（相反）+ stroy(struct)（建）→ 反着建",
-          "破坏"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r19",
-      "name": "form",
-      "type": "词根",
-      "meaning": "形状；形成",
-      "essence": "form = 形状、形成",
-      "examples": [
-        [
-          "reform",
-          "re（重新）+ form（塑形）→ 重新塑造",
-          "改革"
-        ],
-        [
-          "inform",
-          "in（进入）+ form（成形）→ 在心里成形",
-          "告知"
-        ],
-        [
-          "transform",
-          "trans（转换）+ form（形）",
-          "转变"
-        ],
-        [
-          "uniform",
-          "uni（统一）+ form（形）→ 统一形式",
-          "制服；统一的"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r20",
-      "name": "tract",
-      "type": "词根",
-      "meaning": "拉、拖",
-      "essence": "拉丁语 trahere 拖拉。tract = 拉",
-      "examples": [
-        [
-          "attract",
-          "at（朝）+ tract（拉）→ 拉过来",
-          "吸引"
-        ],
-        [
-          "contract",
-          "con（共同）+ tract（拉）→ 拉到一起",
-          "合同；收缩"
-        ],
-        [
-          "extract",
-          "ex（向外）+ tract（拉）→ 拉出来",
-          "提取；拔出"
-        ],
-        [
-          "tractor",
-          "tract（拖）+ or（物）",
-          "拖拉机"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r21",
-      "name": "vid / vis",
-      "type": "词根",
-      "meaning": "看",
-      "essence": "拉丁语 videre 看。vid/vis = 看",
-      "examples": [
-        [
-          "visible",
-          "vis（看）+ ible（可…的）",
-          "可见的"
-        ],
-        [
-          "vision",
-          "vis（看）+ ion",
-          "视力；愿景"
-        ],
-        [
-          "visit",
-          "vis（看）+ it → 去看",
-          "参观"
-        ],
-        [
-          "revise",
-          "re（再）+ vis（看）→ 再看一遍",
-          "修订；复习"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r22",
-      "name": "aud",
-      "type": "词根",
-      "meaning": "听",
-      "essence": "拉丁语 audire 听。aud = 听",
-      "examples": [
-        [
-          "audio",
-          "aud（听）+ io",
-          "音频"
-        ],
-        [
-          "audience",
-          "aud（听）+ ience → 听的人",
-          "观众；听众"
-        ],
-        [
-          "audible",
-          "aud（听）+ ible（可…的）",
-          "听得见的"
-        ],
-        [
-          "auditorium",
-          "aud（听）+ orium（场所）→ 听的地方",
-          "礼堂"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r23",
-      "name": "scrib / script",
-      "type": "词根",
-      "meaning": "写",
-      "essence": "拉丁语 scribere 写。scrib/script = 写",
-      "examples": [
-        [
-          "describe",
-          "de（向下）+ scrib（写）→ 写下来",
-          "描述"
-        ],
-        [
-          "prescribe",
-          "pre（预先）+ scrib（写）→ 预先写好",
-          "开处方；规定"
-        ],
-        [
-          "script",
-          "script（写）→ 写出的东西",
-          "剧本；脚本"
-        ],
-        [
-          "manuscript",
-          "manu（手）+ script（写）→ 手写的",
-          "手稿"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r24",
-      "name": "graph",
-      "type": "词根",
-      "meaning": "写、画",
-      "essence": "希腊语 graphein 写/画。graph = 写画",
-      "examples": [
-        [
-          "photograph",
-          "photo（光）+ graph（画）→ 用光作画",
-          "照片"
-        ],
-        [
-          "autograph",
-          "auto（自己）+ graph（写）→ 自己写",
-          "亲笔签名"
-        ],
-        [
-          "biography",
-          "bio（生命）+ graph（写）→ 写一生",
-          "传记"
-        ],
-        [
-          "paragraph",
-          "para（旁）+ graph（写）→ 旁边标注",
-          "段落"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r25",
-      "name": "phon",
-      "type": "词根",
-      "meaning": "声音",
-      "essence": "希腊语 phone 声音。phon = 声",
-      "examples": [
-        [
-          "phone",
-          "phon（声）+ e",
-          "电话"
-        ],
-        [
-          "telephone",
-          "tele（远）+ phon（声）→ 远程传声",
-          "电话"
-        ],
-        [
-          "microphone",
-          "micro（小）+ phon（声）→ 把小声变大",
-          "麦克风"
-        ],
-        [
-          "symphony",
-          "sym（共同）+ phon（声）→ 共同发声",
-          "交响乐"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r26",
-      "name": "viv / vit",
-      "type": "词根",
-      "meaning": "生命",
-      "essence": "拉丁语 vivere 活。viv/vit = 活、生命",
-      "examples": [
-        [
-          "vivid",
-          "viv（活）+ id → 活灵活现",
-          "生动的；鲜艳的"
-        ],
-        [
-          "survive",
-          "sur（超）+ viv（活）→ 活过难关",
-          "幸存"
-        ],
-        [
-          "vital",
-          "vit（生命）+ al → 生命攸关",
-          "至关重要的"
-        ],
-        [
-          "vitamin",
-          "vit（生命）+ amin（胺）→ 维持生命之物",
-          "维生素"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r27",
-      "name": "cred",
-      "type": "词根",
-      "meaning": "相信",
-      "essence": "拉丁语 credere 相信。cred = 信",
-      "examples": [
-        [
-          "credit",
-          "cred（信）+ it → 信得过",
-          "信用；学分"
-        ],
-        [
-          "incredible",
-          "in（不）+ cred（信）+ ible（可…的）",
-          "难以置信的"
-        ],
-        [
-          "credential",
-          "cred（信）+ ential → 让人信的东西",
-          "证书；资历"
-        ],
-        [
-          "discredit",
-          "dis（不）+ credit（信）",
-          "使失去信誉"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r28",
-      "name": "cur / curr",
-      "type": "词根",
-      "meaning": "跑",
-      "essence": "拉丁语 currere 跑。cur/curr = 跑",
-      "examples": [
-        [
-          "occur",
-          "oc（向）+ cur（跑）→ 跑过来",
-          "发生"
-        ],
-        [
-          "current",
-          "curr（跑）→ 正在流动的",
-          "现在的；电流"
-        ],
-        [
-          "excursion",
-          "ex（外）+ cur（跑）+ sion → 跑出去",
-          "远足；短途旅行"
-        ],
-        [
-          "cursor",
-          "curr（跑）+ or → 屏幕上跑的东西",
-          "光标"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r29",
-      "name": "flu",
-      "type": "词根",
-      "meaning": "流",
-      "essence": "拉丁语 fluere 流动。flu = 流",
-      "examples": [
-        [
-          "fluent",
-          "flu（流）+ ent → 流出来的",
-          "流利的"
-        ],
-        [
-          "influence",
-          "in（进入）+ flu（流）+ ence → 流入内心",
-          "影响"
-        ],
-        [
-          "fluid",
-          "flu（流）+ id",
-          "流体的"
-        ],
-        [
-          "fluent speaker",
-          "flu（流）+ ent → 说得如流水",
-          "说母语般流利的人"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r30",
-      "name": "mit / miss",
-      "type": "词根",
-      "meaning": "送、发",
-      "essence": "拉丁语 mittere 送发。mit/miss = 送",
-      "examples": [
-        [
-          "submit",
-          "sub（下）+ mit（送）→ 从下送上",
-          "提交"
-        ],
-        [
-          "permit",
-          "per（通过）+ mit（送）→ 放行",
-          "允许"
-        ],
-        [
-          "mission",
-          "miss（送）+ ion → 被派出去",
-          "任务；使命"
-        ],
-        [
-          "transmit",
-          "trans（跨）+ mit（送）→ 跨越传送",
-          "传送；传染"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r31",
-      "name": "ceive / cept",
-      "type": "词根",
-      "meaning": "拿、取",
-      "essence": "拉丁语 capere 拿。ceive/cept = 拿",
-      "examples": [
-        [
-          "receive",
-          "re（回）+ ceive（拿）→ 拿回来",
-          "收到"
-        ],
-        [
-          "accept",
-          "ac（朝）+ cept（拿）→ 拿过来",
-          "接受"
-        ],
-        [
-          "concept",
-          "con（共同）+ cept（拿）→ 共同取出的观念",
-          "概念"
-        ],
-        [
-          "deceive",
-          "de（坏）+ ceive（拿）→ 拿走骗来",
-          "欺骗"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r32",
-      "name": "hab / hibit",
-      "type": "词根",
-      "meaning": "持有；住",
-      "essence": "拉丁语 habere 持有。hab/hibit = 有、住",
-      "examples": [
-        [
-          "habit",
-          "hab（持有）+ it → 长期持有的行为",
-          "习惯"
-        ],
-        [
-          "exhibit",
-          "ex（向外）+ hibit（持有）→ 拿出来",
-          "展览"
-        ],
-        [
-          "inhabit",
-          "in（进入）+ habit（持有）→ 住在里面",
-          "居住"
-        ],
-        [
-          "prohibit",
-          "pro（在前）+ hibit（持有）→ 提前扣住",
-          "禁止"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r33",
-      "name": "fin",
-      "type": "词根",
-      "meaning": "结束；界限",
-      "essence": "拉丁语 finis 终点。fin = 末端",
-      "examples": [
-        [
-          "finish",
-          "fin（结束）+ ish",
-          "完成"
-        ],
-        [
-          "final",
-          "fin（末）+ al",
-          "最终的"
-        ],
-        [
-          "infinite",
-          "in（无）+ fin（界限）+ ite",
-          "无限的"
-        ],
-        [
-          "define",
-          "de（定）+ fine（界限）→ 定下界限",
-          "下定义"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r34",
-      "name": "sens / sent",
-      "type": "词根",
-      "meaning": "感觉",
-      "essence": "拉丁语 sentire 感觉。sens/sent = 感",
-      "examples": [
-        [
-          "sensitive",
-          "sens（感）+ itive → 感受多的",
-          "敏感的"
-        ],
-        [
-          "sentiment",
-          "sent（感）+ iment → 心里的感觉",
-          "情绪；感伤"
-        ],
-        [
-          "consent",
-          "con（共同）+ sent（感）→ 感觉一致",
-          "同意"
-        ],
-        [
-          "sentence",
-          "sent（表达感受）+ ence → 表达完整的想法",
-          "句子；判决"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r35",
-      "name": "vert / vers",
-      "type": "词根",
-      "meaning": "转",
-      "essence": "拉丁语 vertere 转。vert/vers = 转",
-      "examples": [
-        [
-          "convert",
-          "con（转化）+ vert（转）",
-          "转换"
-        ],
-        [
-          "reverse",
-          "re（反）+ vers（转）→ 反着转",
-          "反转；颠倒"
-        ],
-        [
-          "advertise",
-          "ad（朝向）+ vert（转）→ 使目光转向",
-          "做广告"
-        ],
-        [
-          "universe",
-          "uni（一）+ vers（转）→ 旋成一体的万物",
-          "宇宙"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r36",
-      "name": "pos / pon",
-      "type": "词根",
-      "meaning": "放",
-      "essence": "拉丁语 ponere 放置。pos/pon = 放",
-      "examples": [
-        [
-          "position",
-          "pos（放）+ ition → 放的位置",
-          "位置"
-        ],
-        [
-          "compose",
-          "com（共同）+ pos（放）→ 放在一起",
-          "组成；创作"
-        ],
-        [
-          "postpone",
-          "post（后）+ pon（放）→ 往后放",
-          "推迟"
-        ],
-        [
-          "deposit",
-          "de（下）+ posit（放）→ 放下去",
-          "存款；沉积"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r37",
-      "name": "ten / tain",
-      "type": "词根",
-      "meaning": "握、保持",
-      "essence": "拉丁语 tenere 握住。ten/tain = 拿住",
-      "examples": [
-        [
-          "contain",
-          "con（共同）+ tain（握）→ 握在里面",
-          "包含"
-        ],
-        [
-          "maintain",
-          "main（手）+ tain（握）→ 用手握住",
-          "维持"
-        ],
-        [
-          "continent",
-          "con（共同）+ tinent → 连成一片的地",
-          "大陆"
-        ],
-        [
-          "tenant",
-          "ten（持有）+ ant（人）→ 持屋之人",
-          "房客"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r38",
-      "name": "cap",
-      "type": "词根",
-      "meaning": "头；抓",
-      "essence": "拉丁语 caput 头 / capere 抓",
-      "examples": [
-        [
-          "captain",
-          "cap（头）+ tain → 一队之首",
-          "队长；船长"
-        ],
-        [
-          "capital",
-          "capit（头）+ al → 头等城市/头等钱",
-          "首都；资本"
-        ],
-        [
-          "capture",
-          "capt（抓）+ ure",
-          "捕获"
-        ],
-        [
-          "escape",
-          "es（出）+ cap（抓）→ 逃出抓捕",
-          "逃脱"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r39",
-      "name": "-ful",
-      "type": "后缀",
-      "meaning": "形容词：充满……的",
-      "essence": "名词/动词 + ful = 装满这种性质",
-      "examples": [
-        [
-          "careful",
-          "care（关心）+ ful → 装满关心",
-          "小心的"
-        ],
-        [
-          "helpful",
-          "help（帮助）+ ful",
-          "有帮助的"
-        ],
-        [
-          "beautiful",
-          "beauty（美）+ ful",
-          "美丽的"
-        ],
-        [
-          "wonderful",
-          "wonder（惊叹）+ ful",
-          "极好的"
-        ]
-      ],
-      "phrases": [],
-      "note": "反义后缀：-less（无），如 careless 粗心的",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r40",
-      "name": "-less",
-      "type": "后缀",
-      "meaning": "形容词：没有……的",
-      "essence": "词根 + less = 缺少",
-      "examples": [
-        [
-          "careless",
-          "care（小心）+ less → 没有小心",
-          "粗心的"
-        ],
-        [
-          "useless",
-          "use（用处）+ less",
-          "无用的"
-        ],
-        [
-          "endless",
-          "end（尽头）+ less",
-          "无尽的"
-        ],
-        [
-          "homeless",
-          "home（家）+ less",
-          "无家可归的"
-        ]
-      ],
-      "phrases": [],
-      "note": "反义后缀：-ful（充满）",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r41",
-      "name": "-able / -ible",
-      "type": "后缀",
-      "meaning": "形容词：可……的、值得……的",
-      "essence": "动词 + able = 可以被做的",
-      "examples": [
-        [
-          "comfortable",
-          "comfort（舒适）+ able",
-          "舒适的"
-        ],
-        [
-          "reliable",
-          "rely（依赖）+ able → 值得依赖",
-          "可靠的"
-        ],
-        [
-          "invisible",
-          "in（不）+ vis（看）+ ible",
-          "看不见的"
-        ],
-        [
-          "reasonable",
-          "reason（道理）+ able",
-          "合理的"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r42",
-      "name": "-er / -or",
-      "type": "后缀",
-      "meaning": "名词：做……的人 / 物",
-      "essence": "动词 + er/or = 执行者",
-      "examples": [
-        [
-          "teacher",
-          "teach（教）+ er",
-          "老师"
-        ],
-        [
-          "actor",
-          "act（表演）+ or",
-          "演员"
-        ],
-        [
-          "visitor",
-          "visit（参观）+ or",
-          "游客"
-        ],
-        [
-          "computer",
-          "comput（计算）+ er → 会计算的机器",
-          "计算机"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r43",
-      "name": "-ness",
-      "type": "后缀",
-      "meaning": "名词：……的性质/状态",
-      "essence": "形容词 + ness 变名词",
-      "examples": [
-        [
-          "happiness",
-          "happy（幸福）+ ness",
-          "幸福"
-        ],
-        [
-          "kindness",
-          "kind（善良）+ ness",
-          "善意"
-        ],
-        [
-          "business",
-          "busy（忙碌）+ ness → 忙的事",
-          "生意；事务"
-        ],
-        [
-          "illness",
-          "ill（病）+ ness",
-          "疾病"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r44",
-      "name": "-ment",
-      "type": "后缀",
-      "meaning": "名词：行为、结果",
-      "essence": "动词 + ment 变名词",
-      "examples": [
-        [
-          "development",
-          "develop（发展）+ ment",
-          "发展"
-        ],
-        [
-          "government",
-          "govern（治理）+ ment",
-          "政府"
-        ],
-        [
-          "movement",
-          "move（移动）+ ment",
-          "运动"
-        ],
-        [
-          "agreement",
-          "agree（同意）+ ment",
-          "协议"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r45",
-      "name": "-ize / -ise",
-      "type": "后缀",
-      "meaning": "动词：使……化",
-      "essence": "形容词/名词 + ize 变动词",
-      "examples": [
-        [
-          "realize",
-          "real（真实的）+ ize → 使成真",
-          "实现；意识到"
-        ],
-        [
-          "organize",
-          "organ（器官/组织）+ ize",
-          "组织"
-        ],
-        [
-          "apologize",
-          "apology（道歉）+ ize",
-          "道歉"
-        ],
-        [
-          "modernize",
-          "modern（现代）+ ize",
-          "使现代化"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r46",
-      "name": "in- / im-",
-      "type": "前缀",
-      "meaning": "否定「不」；或「进入」",
-      "essence": "一词两用：接在形容词前表否定，接动词前常表进入",
-      "examples": [
-        [
-          "impossible",
-          "im（不）+ possible（可能）",
-          "不可能的"
-        ],
-        [
-          "incorrect",
-          "in（不）+ correct（正确）",
-          "不正确的"
-        ],
-        [
-          "impolite",
-          "im（不）+ polite（礼貌）",
-          "不礼貌的"
-        ],
-        [
-          "include",
-          "in（进入）+ clude（关）→ 关在里面",
-          "包含"
-        ]
-      ],
-      "phrases": [],
-      "note": "im 用在 b/m/p 前（impossible），其余多用 in-",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r47",
-      "name": "dis-",
-      "type": "前缀",
-      "meaning": "否定；相反、分开",
-      "essence": "dis = 不 / 相反，把词义反转",
-      "examples": [
-        [
-          "disagree",
-          "dis（不）+ agree（同意）",
-          "不同意"
-        ],
-        [
-          "disappear",
-          "dis（相反）+ appear（出现）",
-          "消失"
-        ],
-        [
-          "discover",
-          "dis（打开）+ cover（盖）→ 揭开盖子",
-          "发现"
-        ],
-        [
-          "dishonest",
-          "dis（不）+ honest（诚实）",
-          "不诚实的"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r48",
-      "name": "un-",
-      "type": "前缀",
-      "meaning": "不；相反",
-      "essence": "un = not，最常用的否定前缀",
-      "examples": [
-        [
-          "unhappy",
-          "un（不）+ happy",
-          "不开心"
-        ],
-        [
-          "unable",
-          "un（不）+ able（能够）",
-          "不能的"
-        ],
-        [
-          "unfair",
-          "un（不）+ fair（公平）",
-          "不公平的"
-        ],
-        [
-          "unusual",
-          "un（不）+ usual（平常）",
-          "不寻常的"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r49",
-      "name": "mis-",
-      "type": "前缀",
-      "meaning": "错误地",
-      "essence": "mis = 错，做错了的动作",
-      "examples": [
-        [
-          "mistake",
-          "mis（错）+ take（拿）→ 拿错了",
-          "错误"
-        ],
-        [
-          "misunderstand",
-          "mis（错）+ understand（理解）",
-          "误解"
-        ],
-        [
-          "mislead",
-          "mis（错）+ lead（引导）",
-          "误导"
-        ],
-        [
-          "misspell",
-          "mis（错）+ spell（拼写）",
-          "拼错"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r50",
-      "name": "sub-",
-      "type": "前缀",
-      "meaning": "下；次",
-      "essence": "sub = 在下面 / 次一级",
-      "examples": [
-        [
-          "subway",
-          "sub（地下）+ way（路）",
-          "地铁"
-        ],
-        [
-          "submarine",
-          "sub（水）+ marine（海）→ 海面之下",
-          "潜艇"
-        ],
-        [
-          "subject",
-          "sub（下）+ ject（扔）→ 扔在下面对象",
-          "科目；主题"
-        ],
-        [
-          "subway station",
-          "sub + way → 地下的车站",
-          "地铁站"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r51",
-      "name": "trans-",
-      "type": "前缀",
-      "meaning": "跨越；转换",
-      "essence": "trans = 从一边到另一边",
-      "examples": [
-        [
-          "transport",
-          "trans（跨）+ port（运）→ 跨地运输",
-          "运输"
-        ],
-        [
-          "translate",
-          "trans（转换）+ late → 语言转换",
-          "翻译"
-        ],
-        [
-          "transform",
-          "trans（转）+ form（形）",
-          "变形；转变"
-        ],
-        [
-          "transmit",
-          "trans（跨）+ mit（送）",
-          "传送"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r52",
-      "name": "ex-",
-      "type": "前缀",
-      "meaning": "向外；前（任）",
-      "essence": "ex = 出去 / 之前的",
-      "examples": [
-        [
-          "exit",
-          "ex（外）+ it（走）→ 走出去",
-          "出口"
-        ],
-        [
-          "export",
-          "ex（外）+ port（运）",
-          "出口"
-        ],
-        [
-          "exchange",
-          "ex（外）+ change（换）→ 向外换出",
-          "交换"
-        ],
-        [
-          "express",
-          "ex（外）+ press（压）→ 压出来",
-          "表达；快递"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r53",
-      "name": "ad- / ac-",
-      "type": "前缀",
-      "meaning": "朝向、接近",
-      "essence": "ad = 朝向；常变形为 ac-/af-/ap- 以贴合后面的字母",
-      "examples": [
-        [
-          "advance",
-          "ad（朝前）+ vance → 向前",
-          "前进"
-        ],
-        [
-          "admit",
-          "ad（朝）+ mit（送）→ 送过去",
-          "承认；录取"
-        ],
-        [
-          "accept",
-          "ac（朝）+ cept（拿）→ 拿过去",
-          "接受"
-        ],
-        [
-          "arrive",
-          "ar（朝）+ rive（岸）→ 到岸",
-          "到达"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
-    },
-    {
-      "id": "r54",
-      "name": "over-",
-      "type": "前缀",
-      "meaning": "过度；在上面",
-      "essence": "over = 太多 / 越过",
-      "examples": [
-        [
-          "oversleep",
-          "over（过度）+ sleep（睡）→ 睡过头",
-          "睡过头"
-        ],
-        [
-          "overuse",
-          "over（过度）+ use（用）",
-          "过度使用"
-        ],
-        [
-          "overcome",
-          "over（越过）+ come（来）→ 越过来",
-          "克服"
-        ],
-        [
-          "overlook",
-          "over（上）+ look（看）→ 在上面看漏",
-          "忽视；俯瞰"
-        ]
-      ],
-      "phrases": [],
-      "note": "",
-      "added": "2026-11-18"
+     "word": "benign",
+     "breakdown": "bene（好）+ gn（出生）→ 天性和善",
+     "zh": "和善的；（肿瘤）良性的"
     }
-  ]
+   ],
+   "phrases": [],
+   "note": "反义词根：mal-（坏），如 malfunction 故障"
+  },
+  {
+   "id": "r4",
+   "name": "fac / fect / fic / fit",
+   "type": "词根",
+   "meaning": "做、行动",
+   "essence": "同一词根的不同变形（拉丁语 facere 做）。认识这个家族，几十个单词一串全解",
+   "examples": [
+    {
+     "word": "factory",
+     "breakdown": "fact（做）+ ory（地方）→ 做东西的地方",
+     "zh": "工厂"
+    },
+    {
+     "word": "perfect",
+     "breakdown": "per（完全）+ fect（做）→ 做得完全",
+     "zh": "完美的"
+    },
+    {
+     "word": "efficient",
+     "breakdown": "ef（出）+ fic（做）→ 做得出效果",
+     "zh": "高效的"
+    },
+    {
+     "word": "facilitate",
+     "breakdown": "fac（做）+ it + ate（使）→ 使容易做",
+     "zh": "促进；使便利"
+    },
+    {
+     "word": "affect",
+     "breakdown": "af（向）+ fect（做）→ 向……施加作用",
+     "zh": "影响"
+    },
+    {
+     "word": "benefactor",
+     "breakdown": "bene（好）+ fac（做）+ tor（人）",
+     "zh": "恩人"
+    }
+   ],
+   "phrases": [],
+   "note": "兄弟词根：fect（perfect）、fic（efficient）、fit（benefit）"
+  },
+  {
+   "id": "r5",
+   "name": "spect",
+   "type": "词根",
+   "meaning": "看",
+   "essence": "拉丁语 spectare 看。spect 出现 = 和“看”有关",
+   "examples": [
+    {
+     "word": "inspect",
+     "breakdown": "in（向内）+ spect（看）",
+     "zh": "检查；视察"
+    },
+    {
+     "word": "respect",
+     "breakdown": "re（反复）+ spect（看）→ 反复看、重视",
+     "zh": "尊重"
+    },
+    {
+     "word": "prospect",
+     "breakdown": "pro（向前）+ spect（看）→ 向前看",
+     "zh": "前景；展望"
+    },
+    {
+     "word": "spectator",
+     "breakdown": "spect（看）+ ator（人）",
+     "zh": "观众"
+    }
+   ],
+   "phrases": [],
+   "note": "同族：look 系短语 look up / look into",
+   "related": [
+    "vid / vis",
+    "aud"
+   ]
+  },
+  {
+   "id": "r6",
+   "name": "dict",
+   "type": "词根",
+   "meaning": "说",
+   "essence": "拉丁语 dicere 说。dict = 说",
+   "examples": [
+    {
+     "word": "predict",
+     "breakdown": "pre（先）+ dict（说）→ 先说",
+     "zh": "预言"
+    },
+    {
+     "word": "dictionary",
+     "breakdown": "dict（说）+ ionary",
+     "zh": "字典（收集“说法”）"
+    },
+    {
+     "word": "dictate",
+     "breakdown": "dict（说）+ ate",
+     "zh": "口述；命令"
+    },
+    {
+     "word": "contradict",
+     "breakdown": "contra（相反）+ dict（说）→ 反着说",
+     "zh": "反驳；矛盾"
+    }
+   ],
+   "phrases": [],
+   "note": "词源拉丁 dicere「说」。dictator（独裁者）=「说一不二的人」——一个词根串起 dictionary / predict / contradict 全家。",
+   "related": [
+    "scrib / script",
+    "graph"
+   ]
+  },
+  {
+   "id": "r7",
+   "name": "ject",
+   "type": "词根",
+   "meaning": "扔、投",
+   "essence": "拉丁语 jacere 扔。ject = 扔出去",
+   "examples": [
+    {
+     "word": "reject",
+     "breakdown": "re（回）+ ject（扔）→ 扔回来",
+     "zh": "拒绝"
+    },
+    {
+     "word": "object",
+     "breakdown": "ob（反）+ ject（扔）→ 投向对面",
+     "zh": "反对；物体"
+    },
+    {
+     "word": "inject",
+     "breakdown": "in（内）+ ject（扔）→ 扔进去",
+     "zh": "注射；注入"
+    },
+    {
+     "word": "project",
+     "breakdown": "pro（向前）+ ject（扔）→ 向前投掷",
+     "zh": "投射；项目"
+    }
+   ],
+   "phrases": [],
+   "note": "拉丁 jacere「扔」。jet（喷气式飞机）是它的亲戚——把气流「扔」出去。碰到 deject/eject/inject，先想「扔」。",
+   "related": [
+    "mit / miss",
+    "port"
+   ]
+  },
+  {
+   "id": "r8",
+   "name": "port",
+   "type": "词根",
+   "meaning": "搬运；携带",
+   "essence": "拉丁语 portare 搬运。port = 拿、运",
+   "examples": [
+    {
+     "word": "import",
+     "breakdown": "im（进入）+ port（运）",
+     "zh": "进口"
+    },
+    {
+     "word": "export",
+     "breakdown": "ex（外）+ port（运）",
+     "zh": "出口"
+    },
+    {
+     "word": "transport",
+     "breakdown": "trans（跨越）+ port（运）",
+     "zh": "运输"
+    },
+    {
+     "word": "portable",
+     "breakdown": "port（携带）+ able（可……的）",
+     "zh": "便携的"
+    }
+   ],
+   "phrases": [],
+   "note": "port 港口本义就是「搬运的地方」，所以 import（运进来）、export（运出去）都自带方向感。",
+   "related": [
+    "trans-",
+    "mit / miss"
+   ]
+  },
+  {
+   "id": "r9",
+   "name": "pre-",
+   "type": "前缀",
+   "meaning": "前；预先",
+   "essence": "pre 开头 = 在……之前。常见于“提前做某事”",
+   "examples": [
+    {
+     "word": "predict",
+     "breakdown": "pre（先）+ dict（说）",
+     "zh": "预言"
+    },
+    {
+     "word": "prevent",
+     "breakdown": "pre（提前）+ vent（来）→ 提前到场拦截",
+     "zh": "阻止"
+    },
+    {
+     "word": "preview",
+     "breakdown": "pre（先）+ view（看）",
+     "zh": "预习；预览"
+    },
+    {
+     "word": "prepare",
+     "breakdown": "pre（预先）+ pare（备）",
+     "zh": "准备"
+    }
+   ],
+   "phrases": [],
+   "note": "反义：post-（后），如 postpone 推迟",
+   "related": [
+    "re-"
+   ]
+  },
+  {
+   "id": "r10",
+   "name": "re-",
+   "type": "前缀",
+   "meaning": "再；回；返回",
+   "essence": "re 开头 = 再次 / 往回",
+   "examples": [
+    {
+     "word": "repeat",
+     "breakdown": "re（再）+ peat",
+     "zh": "重复"
+    },
+    {
+     "word": "return",
+     "breakdown": "re（回）+ turn（转）→ 转回去",
+     "zh": "返回；归还"
+    },
+    {
+     "word": "review",
+     "breakdown": "re（再）+ view（看）→ 再看一遍",
+     "zh": "复习"
+    },
+    {
+     "word": "rebuild",
+     "breakdown": "re（再）+ build（建）",
+     "zh": "重建"
+    }
+   ],
+   "phrases": [],
+   "note": "re- 有两义：「再」（repeat）和「回」（return、recall）。判断不出时先想「再来一次」，对不上再想「回去」。",
+   "related": [
+    "pre-",
+    "dis-"
+   ]
+  },
+  {
+   "id": "r11",
+   "name": "-tion",
+   "type": "后缀",
+   "meaning": "名词：行为、行为的结果",
+   "essence": "动词 + tion 变名词，读作 /ʃən/",
+   "examples": [
+    {
+     "word": "action",
+     "breakdown": "act（行动）+ ion",
+     "zh": "行动"
+    },
+    {
+     "word": "education",
+     "breakdown": "educate（教育）+ ion",
+     "zh": "教育"
+    },
+    {
+     "word": "creation",
+     "breakdown": "create（创造）+ ion",
+     "zh": "创造"
+    },
+    {
+     "word": "protection",
+     "breakdown": "protect（保护）+ ion",
+     "zh": "保护"
+    }
+   ],
+   "phrases": [],
+   "note": "兄弟后缀：-sion、-ation"
+  },
+  {
+   "id": "r12",
+   "name": "con- / com- / co-",
+   "type": "前缀",
+   "meaning": "共同；一起",
+   "essence": "con/com/co 开头 = 大家一起做",
+   "examples": [
+    {
+     "word": "connect",
+     "breakdown": "con（共同）+ nect（连）→ 连在一起",
+     "zh": "连接"
+    },
+    {
+     "word": "combine",
+     "breakdown": "com（共同）+ bine（二）→ 合二为一",
+     "zh": "结合"
+    },
+    {
+     "word": "communicate",
+     "breakdown": "com（共同）+ munic（共享）",
+     "zh": "交流；沟通"
+    },
+    {
+     "word": "cooperate",
+     "breakdown": "co（共同）+ operate（操作）",
+     "zh": "合作"
+    }
+   ],
+   "phrases": [],
+   "note": "同一个前缀的三副面孔，后面接 c/b/p/m 时常变形。记住核心「抱在一起」：connect、combine、company、cooperate。",
+   "related": [
+    "ad- / ac-",
+    "ex-"
+   ]
+  },
+  {
+   "id": "r13",
+   "name": "vent / ven",
+   "type": "词根",
+   "meaning": "来、发生",
+   "essence": "拉丁语 venire 来。vent 出现 = “来”或“事情发生”",
+   "examples": [
+    {
+     "word": "prevent",
+     "breakdown": "pre（提前）+ vent（来）→ 提前来挡",
+     "zh": "阻止"
+    },
+    {
+     "word": "event",
+     "breakdown": "e（出）+ vent（来）→ 出来的事",
+     "zh": "事件"
+    },
+    {
+     "word": "invent",
+     "breakdown": "in（在里面）+ vent（来）→ 心里想出来",
+     "zh": "发明"
+    },
+    {
+     "word": "avenue",
+     "breakdown": "a + ven（来）+ ue → 来的路",
+     "zh": "大街"
+    },
+    {
+     "word": "convenient",
+     "breakdown": "con（共同）+ ven（来）→ 都聚得拢",
+     "zh": "方便的"
+    },
+    {
+     "word": "adventure",
+     "breakdown": "ad（朝）+ vent（来）→ 朝未知走去",
+     "zh": "冒险"
+    }
+   ],
+   "phrases": [],
+   "note": "venue（场馆）=大家「来」的地方；adventure = ad（朝）+ vent（来）→朝未知走去。事件 event 就是「冒出来的事」。",
+   "added": "2026-11-18",
+   "related": [
+    "ad- / ac-",
+    "pre-"
+   ]
+  },
+  {
+   "id": "r14",
+   "name": "mot / mov",
+   "type": "词根",
+   "meaning": "动",
+   "essence": "拉丁语 movere 移动。mot/mov = 动",
+   "examples": [
+    {
+     "word": "motion",
+     "breakdown": "mot（动）+ ion（名词）",
+     "zh": "运动；动作"
+    },
+    {
+     "word": "promote",
+     "breakdown": "pro（向前）+ mot（动）→ 使向前动",
+     "zh": "促进；晋升"
+    },
+    {
+     "word": "remove",
+     "breakdown": "re（离开）+ mov（动）→ 移走",
+     "zh": "移除"
+    },
+    {
+     "word": "emotion",
+     "breakdown": "e（出）+ mot（动）+ ion → 心里的动静",
+     "zh": "情绪"
+    },
+    {
+     "word": "remote",
+     "breakdown": "re（远）+ mot（动）→ 移得远 → 远程",
+     "zh": "遥远的；遥控的"
+    },
+    {
+     "word": "motor",
+     "breakdown": "mot（动）+ or（物）→ 让机器动的东西",
+     "zh": "发动机"
+    }
+   ],
+   "phrases": [],
+   "note": "remote（遥控）= re（远）+ mot（动）→ 远程操作；motor 发动机是让机器「动」的心脏。情绪 emotion = 心里冒出来的动静。",
+   "added": "2026-11-18",
+   "related": [
+    "re-",
+    "sens / sent"
+   ]
+  },
+  {
+   "id": "r15",
+   "name": "press",
+   "type": "词根",
+   "meaning": "压",
+   "essence": "press 压。press 在词中 = 压",
+   "examples": [
+    {
+     "word": "pressure",
+     "breakdown": "press（压）+ ure（名词）",
+     "zh": "压力"
+    },
+    {
+     "word": "impress",
+     "breakdown": "im（进入）+ press（压）→ 压进心里",
+     "zh": "使印象深刻"
+    },
+    {
+     "word": "express",
+     "breakdown": "ex（向外）+ press（压）→ 压出来",
+     "zh": "表达"
+    },
+    {
+     "word": "depress",
+     "breakdown": "de（向下）+ press（压）→ 压下去",
+     "zh": "使沮丧"
+    },
+    {
+     "word": "compress",
+     "breakdown": "com（共同）+ press（压）→ 往一起压",
+     "zh": "压缩"
+    },
+    {
+     "word": "impression",
+     "breakdown": "im（进入）+ press（压）+ ion → 压在心里的印",
+     "zh": "印象"
+    }
+   ],
+   "phrases": [],
+   "note": "拉丁 premere「压」。心情低落是 depress（被压下去），打动人是 impress（压进心里）——压力和表达都从这一个动作来。",
+   "added": "2026-11-18",
+   "related": [
+    "ex-",
+    "in- / im-"
+   ]
+  },
+  {
+   "id": "r16",
+   "name": "duc / duct",
+   "type": "词根",
+   "meaning": "引导",
+   "essence": "拉丁语 ducere 引导。duc/duct = 引、带",
+   "examples": [
+    {
+     "word": "educate",
+     "breakdown": "e（向外）+ duc（引导）→ 把潜力引出来",
+     "zh": "教育"
+    },
+    {
+     "word": "introduce",
+     "breakdown": "intro（向内）+ duc（引导）→ 引进来",
+     "zh": "介绍"
+    },
+    {
+     "word": "product",
+     "breakdown": "pro（向前）+ duct（引导）→ 引出来的东西",
+     "zh": "产品"
+    },
+    {
+     "word": "reduce",
+     "breakdown": "re（往回）+ duct（引导）→ 往回引",
+     "zh": "减少"
+    }
+   ],
+   "phrases": [],
+   "note": "education 的本义超美：e（出）+ duc（引）→ 把人的才华「引出来」。conduct 既可指挥乐队，也可指导电。",
+   "added": "2026-11-18",
+   "related": [
+    "-tion"
+   ]
+  },
+  {
+   "id": "r17",
+   "name": "gress",
+   "type": "词根",
+   "meaning": "走",
+   "essence": "拉丁语 gradi 走。gress = 走",
+   "examples": [
+    {
+     "word": "progress",
+     "breakdown": "pro（向前）+ gress（走）→ 向前走",
+     "zh": "进步"
+    },
+    {
+     "word": "aggressive",
+     "breakdown": "ag（向）+ gress（走）+ sive → 向人走去",
+     "zh": "好斗的"
+    },
+    {
+     "word": "congress",
+     "breakdown": "con（共同）+ gress（走）→ 走到一起",
+     "zh": "国会；大会"
+    },
+    {
+     "word": "regress",
+     "breakdown": "re（往回）+ gress（走）",
+     "zh": "退步"
+    }
+   ],
+   "phrases": [],
+   "note": "progress（进步）= 一直往前走；aggressive（咄咄逼人）= 步步「进逼」。retrogress 倒退，正好反着记。",
+   "added": "2026-11-18",
+   "related": [
+    "ad- / ac-",
+    "trans-"
+   ]
+  },
+  {
+   "id": "r18",
+   "name": "struct",
+   "type": "词根",
+   "meaning": "建造",
+   "essence": "拉丁语 struere 建造。struct = 建",
+   "examples": [
+    {
+     "word": "structure",
+     "breakdown": "struct（建）+ ure（名词）",
+     "zh": "结构"
+    },
+    {
+     "word": "construct",
+     "breakdown": "con（共同）+ struct（建）",
+     "zh": "建造"
+    },
+    {
+     "word": "instruct",
+     "breakdown": "in（进入）+ struct（建）→ 把知识建进脑子",
+     "zh": "教导"
+    },
+    {
+     "word": "destroy",
+     "breakdown": "de（相反）+ stroy(struct)（建）→ 反着建",
+     "zh": "破坏"
+    }
+   ],
+   "phrases": [],
+   "note": "structure（结构）是盖楼的骨架；destroy = de（拆）+ struct（建）→ 把建好的拆掉。",
+   "added": "2026-11-18",
+   "related": [
+    "in- / im-"
+   ]
+  },
+  {
+   "id": "r19",
+   "name": "form",
+   "type": "词根",
+   "meaning": "形状；形成",
+   "essence": "form = 形状、形成",
+   "examples": [
+    {
+     "word": "reform",
+     "breakdown": "re（重新）+ form（塑形）→ 重新塑造",
+     "zh": "改革"
+    },
+    {
+     "word": "inform",
+     "breakdown": "in（进入）+ form（成形）→ 在心里成形",
+     "zh": "告知"
+    },
+    {
+     "word": "transform",
+     "breakdown": "trans（转换）+ form（形）",
+     "zh": "转变"
+    },
+    {
+     "word": "uniform",
+     "breakdown": "uni（统一）+ form（形）→ 统一形式",
+     "zh": "制服；统一的"
+    }
+   ],
+   "phrases": [],
+   "note": "uniform（校服）= 统一的「形」；transform（变形）＝换一个形。信息 information 就是「被塑造成形的知识」。",
+   "added": "2026-11-18",
+   "related": [
+    "trans-",
+    "re-"
+   ]
+  },
+  {
+   "id": "r20",
+   "name": "tract",
+   "type": "词根",
+   "meaning": "拉、拖",
+   "essence": "拉丁语 trahere 拖拉。tract = 拉",
+   "examples": [
+    {
+     "word": "attract",
+     "breakdown": "at（朝）+ tract（拉）→ 拉过来",
+     "zh": "吸引"
+    },
+    {
+     "word": "contract",
+     "breakdown": "con（共同）+ tract（拉）→ 拉到一起",
+     "zh": "合同；收缩"
+    },
+    {
+     "word": "extract",
+     "breakdown": "ex（向外）+ tract（拉）→ 拉出来",
+     "zh": "提取；拔出"
+    },
+    {
+     "word": "tractor",
+     "breakdown": "tract（拖）+ or（物）",
+     "zh": "拖拉机"
+    }
+   ],
+   "phrases": [],
+   "note": "attract（吸引）＝把你「拉」过来；tractor（拖拉机）＝靠拉干活的车。合同 contract = 拉到一起的约束。",
+   "added": "2026-11-18",
+   "related": [
+    "ad- / ac-",
+    "ex-"
+   ]
+  },
+  {
+   "id": "r21",
+   "name": "vid / vis",
+   "type": "词根",
+   "meaning": "看",
+   "essence": "拉丁语 videre 看。vid/vis = 看",
+   "examples": [
+    {
+     "word": "visible",
+     "breakdown": "vis（看）+ ible（可…的）",
+     "zh": "可见的"
+    },
+    {
+     "word": "vision",
+     "breakdown": "vis（看）+ ion",
+     "zh": "视力；愿景"
+    },
+    {
+     "word": "visit",
+     "breakdown": "vis（看）+ it → 去看",
+     "zh": "参观"
+    },
+    {
+     "word": "revise",
+     "breakdown": "re（再）+ vis（看）→ 再看一遍",
+     "zh": "修订；复习"
+    }
+   ],
+   "phrases": [],
+   "note": "video、vision、television 全家都是「看」。evident（明显）＝一眼就能看见。",
+   "added": "2026-11-18",
+   "related": [
+    "spect",
+    "aud"
+   ]
+  },
+  {
+   "id": "r22",
+   "name": "aud",
+   "type": "词根",
+   "meaning": "听",
+   "essence": "拉丁语 audire 听。aud = 听",
+   "examples": [
+    {
+     "word": "audio",
+     "breakdown": "aud（听）+ io",
+     "zh": "音频"
+    },
+    {
+     "word": "audience",
+     "breakdown": "aud（听）+ ience → 听的人",
+     "zh": "观众；听众"
+    },
+    {
+     "word": "audible",
+     "breakdown": "aud（听）+ ible（可…的）",
+     "zh": "听得见的"
+    },
+    {
+     "word": "auditorium",
+     "breakdown": "aud（听）+ orium（场所）→ 听的地方",
+     "zh": "礼堂"
+    }
+   ],
+   "phrases": [],
+   "note": "audience（听众）、audio（音频）、auditorium（礼堂）——都是给耳朵服务的。",
+   "added": "2026-11-18",
+   "related": [
+    "phon",
+    "vid / vis"
+   ]
+  },
+  {
+   "id": "r23",
+   "name": "scrib / script",
+   "type": "词根",
+   "meaning": "写",
+   "essence": "拉丁语 scribere 写。scrib/script = 写",
+   "examples": [
+    {
+     "word": "describe",
+     "breakdown": "de（向下）+ scrib（写）→ 写下来",
+     "zh": "描述"
+    },
+    {
+     "word": "prescribe",
+     "breakdown": "pre（预先）+ scrib（写）→ 预先写好",
+     "zh": "开处方；规定"
+    },
+    {
+     "word": "script",
+     "breakdown": "script（写）→ 写出的东西",
+     "zh": "剧本；脚本"
+    },
+    {
+     "word": "manuscript",
+     "breakdown": "manu（手）+ script（写）→ 手写的",
+     "zh": "手稿"
+    }
+   ],
+   "phrases": [],
+   "note": "describe（描写）、prescription（处方＝预先写好的）、script（剧本＝写下来的词）。",
+   "added": "2026-11-18",
+   "related": [
+    "dict",
+    "graph"
+   ]
+  },
+  {
+   "id": "r24",
+   "name": "graph",
+   "type": "词根",
+   "meaning": "写、画",
+   "essence": "希腊语 graphein 写/画。graph = 写画",
+   "examples": [
+    {
+     "word": "photograph",
+     "breakdown": "photo（光）+ graph（画）→ 用光作画",
+     "zh": "照片"
+    },
+    {
+     "word": "autograph",
+     "breakdown": "auto（自己）+ graph（写）→ 自己写",
+     "zh": "亲笔签名"
+    },
+    {
+     "word": "biography",
+     "breakdown": "bio（生命）+ graph（写）→ 写一生",
+     "zh": "传记"
+    },
+    {
+     "word": "paragraph",
+     "breakdown": "para（旁）+ graph（写）→ 旁边标注",
+     "zh": "段落"
+    }
+   ],
+   "phrases": [],
+   "note": "photograph = photo（光）+ graph（画）→ 用光作画；autograph 亲笔签名。graph 也能指「图表」。",
+   "added": "2026-11-18",
+   "related": [
+    "scrib / script",
+    "phon"
+   ]
+  },
+  {
+   "id": "r25",
+   "name": "phon",
+   "type": "词根",
+   "meaning": "声音",
+   "essence": "希腊语 phone 声音。phon = 声",
+   "examples": [
+    {
+     "word": "phone",
+     "breakdown": "phon（声）+ e",
+     "zh": "电话"
+    },
+    {
+     "word": "telephone",
+     "breakdown": "tele（远）+ phon（声）→ 远程传声",
+     "zh": "电话"
+    },
+    {
+     "word": "microphone",
+     "breakdown": "micro（小）+ phon（声）→ 把小声变大",
+     "zh": "麦克风"
+    },
+    {
+     "word": "symphony",
+     "breakdown": "sym（共同）+ phon（声）→ 共同发声",
+     "zh": "交响乐"
+    }
+   ],
+   "phrases": [],
+   "note": "telephone = tele（远）+ phon（声）→ 远方的声音；symphony = sym（共）→ 交响乐。",
+   "added": "2026-11-18",
+   "related": [
+    "graph",
+    "aud"
+   ]
+  },
+  {
+   "id": "r26",
+   "name": "viv / vit",
+   "type": "词根",
+   "meaning": "生命",
+   "essence": "拉丁语 vivere 活。viv/vit = 活、生命",
+   "examples": [
+    {
+     "word": "vivid",
+     "breakdown": "viv（活）+ id → 活灵活现",
+     "zh": "生动的；鲜艳的"
+    },
+    {
+     "word": "survive",
+     "breakdown": "sur（超）+ viv（活）→ 活过难关",
+     "zh": "幸存"
+    },
+    {
+     "word": "vital",
+     "breakdown": "vit（生命）+ al → 生命攸关",
+     "zh": "至关重要的"
+    },
+    {
+     "word": "vitamin",
+     "breakdown": "vit（生命）+ amin（胺）→ 维持生命之物",
+     "zh": "维生素"
+    }
+   ],
+   "phrases": [],
+   "note": "vitamin（维生素）字面意思「维持生命之物」；revive = re（再）+ viv（活）→ 复活、复兴。",
+   "added": "2026-11-18",
+   "related": [
+    "re-"
+   ]
+  },
+  {
+   "id": "r27",
+   "name": "cred",
+   "type": "词根",
+   "meaning": "相信",
+   "essence": "拉丁语 credere 相信。cred = 信",
+   "examples": [
+    {
+     "word": "credit",
+     "breakdown": "cred（信）+ it → 信得过",
+     "zh": "信用；学分"
+    },
+    {
+     "word": "incredible",
+     "breakdown": "in（不）+ cred（信）+ ible（可…的）",
+     "zh": "难以置信的"
+    },
+    {
+     "word": "credential",
+     "breakdown": "cred（信）+ ential → 让人信的东西",
+     "zh": "证书；资历"
+    },
+    {
+     "word": "discredit",
+     "breakdown": "dis（不）+ credit（信）",
+     "zh": "使失去信誉"
+    }
+   ],
+   "phrases": [],
+   "note": "credit card 信用卡的「信用」就是 cred；incredible = in（不）+ cred（信）+ ible → 难以置信。",
+   "added": "2026-11-18",
+   "related": [
+    "in- / im-",
+    "-able / -ible"
+   ]
+  },
+  {
+   "id": "r28",
+   "name": "cur / curr",
+   "type": "词根",
+   "meaning": "跑",
+   "essence": "拉丁语 currere 跑。cur/curr = 跑",
+   "examples": [
+    {
+     "word": "occur",
+     "breakdown": "oc（向）+ cur（跑）→ 跑过来",
+     "zh": "发生"
+    },
+    {
+     "word": "current",
+     "breakdown": "curr（跑）→ 正在流动的",
+     "zh": "现在的；电流"
+    },
+    {
+     "word": "excursion",
+     "breakdown": "ex（外）+ cur（跑）+ sion → 跑出去",
+     "zh": "远足；短途旅行"
+    },
+    {
+     "word": "cursor",
+     "breakdown": "curr（跑）+ or → 屏幕上跑的东西",
+     "zh": "光标"
+    }
+   ],
+   "phrases": [],
+   "note": "current 既指水流也指电流，核心是「流动」；occur = 跑到面前来 → 发生。",
+   "added": "2026-11-18",
+   "related": [
+    "pre-"
+   ]
+  },
+  {
+   "id": "r29",
+   "name": "flu",
+   "type": "词根",
+   "meaning": "流",
+   "essence": "拉丁语 fluere 流动。flu = 流",
+   "examples": [
+    {
+     "word": "fluent",
+     "breakdown": "flu（流）+ ent → 流出来的",
+     "zh": "流利的"
+    },
+    {
+     "word": "influence",
+     "breakdown": "in（进入）+ flu（流）+ ence → 流入内心",
+     "zh": "影响"
+    },
+    {
+     "word": "fluid",
+     "breakdown": "flu（流）+ id",
+     "zh": "流体的"
+    },
+    {
+     "word": "fluent speaker",
+     "breakdown": "flu（流）+ ent → 说得如流水",
+     "zh": "说母语般流利的人"
+    }
+   ],
+   "phrases": [],
+   "note": "fluent（流利）＝说得像水一样顺；influence = in（入）+ flu（流）→ 流进心里 → 影响。",
+   "added": "2026-11-18",
+   "related": [
+    "in- / im-"
+   ]
+  },
+  {
+   "id": "r30",
+   "name": "mit / miss",
+   "type": "词根",
+   "meaning": "送、发",
+   "essence": "拉丁语 mittere 送发。mit/miss = 送",
+   "examples": [
+    {
+     "word": "submit",
+     "breakdown": "sub（下）+ mit（送）→ 从下送上",
+     "zh": "提交"
+    },
+    {
+     "word": "permit",
+     "breakdown": "per（通过）+ mit（送）→ 放行",
+     "zh": "允许"
+    },
+    {
+     "word": "mission",
+     "breakdown": "miss（送）+ ion → 被派出去",
+     "zh": "任务；使命"
+    },
+    {
+     "word": "transmit",
+     "breakdown": "trans（跨）+ mit（送）→ 跨越传送",
+     "zh": "传送；传染"
+    }
+   ],
+   "phrases": [],
+   "note": "mission（任务）＝被「派」出去的事；permit = 允许「通过」。两个字形一个意思，别怕换装。",
+   "added": "2026-11-18",
+   "related": [
+    "trans-",
+    "sub-"
+   ]
+  },
+  {
+   "id": "r31",
+   "name": "ceive / cept",
+   "type": "词根",
+   "meaning": "拿、取",
+   "essence": "拉丁语 capere 拿。ceive/cept = 拿",
+   "examples": [
+    {
+     "word": "receive",
+     "breakdown": "re（回）+ ceive（拿）→ 拿回来",
+     "zh": "收到"
+    },
+    {
+     "word": "accept",
+     "breakdown": "ac（朝）+ cept（拿）→ 拿过来",
+     "zh": "接受"
+    },
+    {
+     "word": "concept",
+     "breakdown": "con（共同）+ cept（拿）→ 共同取出的观念",
+     "zh": "概念"
+    },
+    {
+     "word": "deceive",
+     "breakdown": "de（坏）+ ceive（拿）→ 拿走骗来",
+     "zh": "欺骗"
+    }
+   ],
+   "phrases": [],
+   "note": "receive（接收）、accept（接受）、concept（概念＝收到脑中的想法）。英语里 ceive 常变 cept。",
+   "added": "2026-11-18",
+   "related": [
+    "ex-"
+   ]
+  },
+  {
+   "id": "r32",
+   "name": "hab / hibit",
+   "type": "词根",
+   "meaning": "持有；住",
+   "essence": "拉丁语 habere 持有。hab/hibit = 有、住",
+   "examples": [
+    {
+     "word": "habit",
+     "breakdown": "hab（持有）+ it → 长期持有的行为",
+     "zh": "习惯"
+    },
+    {
+     "word": "exhibit",
+     "breakdown": "ex（向外）+ hibit（持有）→ 拿出来",
+     "zh": "展览"
+    },
+    {
+     "word": "inhabit",
+     "breakdown": "in（进入）+ habit（持有）→ 住在里面",
+     "zh": "居住"
+    },
+    {
+     "word": "prohibit",
+     "breakdown": "pro（在前）+ hibit（持有）→ 提前扣住",
+     "zh": "禁止"
+    }
+   ],
+   "phrases": [],
+   "note": "habit（习惯）＝长住体内的行为；exhibit（展览）＝把东西「拿出来」给人看。",
+   "added": "2026-11-18",
+   "related": [
+    "ex-",
+    "in- / im-"
+   ]
+  },
+  {
+   "id": "r33",
+   "name": "fin",
+   "type": "词根",
+   "meaning": "结束；界限",
+   "essence": "拉丁语 finis 终点。fin = 末端",
+   "examples": [
+    {
+     "word": "finish",
+     "breakdown": "fin（结束）+ ish",
+     "zh": "完成"
+    },
+    {
+     "word": "final",
+     "breakdown": "fin（末）+ al",
+     "zh": "最终的"
+    },
+    {
+     "word": "infinite",
+     "breakdown": "in（无）+ fin（界限）+ ite",
+     "zh": "无限的"
+    },
+    {
+     "word": "define",
+     "breakdown": "de（定）+ fine（界限）→ 定下界限",
+     "zh": "下定义"
+    }
+   ],
+   "phrases": [],
+   "note": "finish（完成）、final（最终）、infinite（无限＝没有边界）——一条线走到底。",
+   "added": "2026-11-18",
+   "related": [
+    "in- / im-",
+    "-tion"
+   ]
+  },
+  {
+   "id": "r34",
+   "name": "sens / sent",
+   "type": "词根",
+   "meaning": "感觉",
+   "essence": "拉丁语 sentire 感觉。sens/sent = 感",
+   "examples": [
+    {
+     "word": "sensitive",
+     "breakdown": "sens（感）+ itive → 感受多的",
+     "zh": "敏感的"
+    },
+    {
+     "word": "sentiment",
+     "breakdown": "sent（感）+ iment → 心里的感觉",
+     "zh": "情绪；感伤"
+    },
+    {
+     "word": "consent",
+     "breakdown": "con（共同）+ sent（感）→ 感觉一致",
+     "zh": "同意"
+    },
+    {
+     "word": "sentence",
+     "breakdown": "sent（表达感受）+ ence → 表达完整的想法",
+     "zh": "句子；判决"
+    }
+   ],
+   "phrases": [],
+   "note": "sentence（句子）的本义是「表达想法的话」；sentiment（情绪）、sensitive（敏感）。",
+   "added": "2026-11-18",
+   "related": [
+    "in- / im-",
+    "-ment"
+   ]
+  },
+  {
+   "id": "r35",
+   "name": "vert / vers",
+   "type": "词根",
+   "meaning": "转",
+   "essence": "拉丁语 vertere 转。vert/vers = 转",
+   "examples": [
+    {
+     "word": "convert",
+     "breakdown": "con（转化）+ vert（转）",
+     "zh": "转换"
+    },
+    {
+     "word": "reverse",
+     "breakdown": "re（反）+ vers（转）→ 反着转",
+     "zh": "反转；颠倒"
+    },
+    {
+     "word": "advertise",
+     "breakdown": "ad（朝向）+ vert（转）→ 使目光转向",
+     "zh": "做广告"
+    },
+    {
+     "word": "universe",
+     "breakdown": "uni（一）+ vers（转）→ 旋成一体的万物",
+     "zh": "宇宙"
+    }
+   ],
+   "phrases": [],
+   "note": "convert（转换）、reverse（反转）、universe（宇宙＝万物「转为一体」）。",
+   "added": "2026-11-18",
+   "related": [
+    "re-"
+   ]
+  },
+  {
+   "id": "r36",
+   "name": "pos / pon",
+   "type": "词根",
+   "meaning": "放",
+   "essence": "拉丁语 ponere 放置。pos/pon = 放",
+   "examples": [
+    {
+     "word": "position",
+     "breakdown": "pos（放）+ ition → 放的位置",
+     "zh": "位置"
+    },
+    {
+     "word": "compose",
+     "breakdown": "com（共同）+ pos（放）→ 放在一起",
+     "zh": "组成；创作"
+    },
+    {
+     "word": "postpone",
+     "breakdown": "post（后）+ pon（放）→ 往后放",
+     "zh": "推迟"
+    },
+    {
+     "word": "deposit",
+     "breakdown": "de（下）+ posit（放）→ 放下去",
+     "zh": "存款；沉积"
+    }
+   ],
+   "phrases": [],
+   "note": "position（位置）＝放的地方；postpone = post（后）+ pon（放）→ 往后放 → 推迟。",
+   "added": "2026-11-18",
+   "related": [
+    "re-"
+   ]
+  },
+  {
+   "id": "r37",
+   "name": "ten / tain",
+   "type": "词根",
+   "meaning": "握、保持",
+   "essence": "拉丁语 tenere 握住。ten/tain = 拿住",
+   "examples": [
+    {
+     "word": "contain",
+     "breakdown": "con（共同）+ tain（握）→ 握在里面",
+     "zh": "包含"
+    },
+    {
+     "word": "maintain",
+     "breakdown": "main（手）+ tain（握）→ 用手握住",
+     "zh": "维持"
+    },
+    {
+     "word": "continent",
+     "breakdown": "con（共同）+ tinent → 连成一片的地",
+     "zh": "大陆"
+    },
+    {
+     "word": "tenant",
+     "breakdown": "ten（持有）+ ant（人）→ 持屋之人",
+     "zh": "房客"
+    }
+   ],
+   "phrases": [],
+   "note": "continent（大陆）＝「连成一片」的土地；attention = at（朝）+ ten（拉）→ 把心拉住 → 注意。",
+   "added": "2026-11-18",
+   "related": [
+    "ex-"
+   ]
+  },
+  {
+   "id": "r38",
+   "name": "cap",
+   "type": "词根",
+   "meaning": "头；抓",
+   "essence": "拉丁语 caput 头 / capere 抓",
+   "examples": [
+    {
+     "word": "captain",
+     "breakdown": "cap（头）+ tain → 一队之首",
+     "zh": "队长；船长"
+    },
+    {
+     "word": "capital",
+     "breakdown": "capit（头）+ al → 头等城市/头等钱",
+     "zh": "首都；资本"
+    },
+    {
+     "word": "capture",
+     "breakdown": "capt（抓）+ ure",
+     "zh": "捕获"
+    },
+    {
+     "word": "escape",
+     "breakdown": "es（出）+ cap（抓）→ 逃出抓捕",
+     "zh": "逃脱"
+    }
+   ],
+   "phrases": [],
+   "note": "capital（首都/大写）＝「头」等的位置；captain（首领）、capture（抓住）。cap 还能当「帽子」记。",
+   "added": "2026-11-18",
+   "related": [
+    "re-",
+    "-tion"
+   ]
+  },
+  {
+   "id": "r39",
+   "name": "-ful",
+   "type": "后缀",
+   "meaning": "形容词：充满……的",
+   "essence": "名词/动词 + ful = 装满这种性质",
+   "examples": [
+    {
+     "word": "careful",
+     "breakdown": "care（关心）+ ful → 装满关心",
+     "zh": "小心的"
+    },
+    {
+     "word": "helpful",
+     "breakdown": "help（帮助）+ ful",
+     "zh": "有帮助的"
+    },
+    {
+     "word": "beautiful",
+     "breakdown": "beauty（美）+ ful",
+     "zh": "美丽的"
+    },
+    {
+     "word": "wonderful",
+     "breakdown": "wonder（惊叹）+ ful",
+     "zh": "极好的"
+    }
+   ],
+   "phrases": [],
+   "note": "反义后缀：-less（无），如 careless 粗心的",
+   "added": "2026-11-18",
+   "related": [
+    "-less"
+   ]
+  },
+  {
+   "id": "r40",
+   "name": "-less",
+   "type": "后缀",
+   "meaning": "形容词：没有……的",
+   "essence": "词根 + less = 缺少",
+   "examples": [
+    {
+     "word": "careless",
+     "breakdown": "care（小心）+ less → 没有小心",
+     "zh": "粗心的"
+    },
+    {
+     "word": "useless",
+     "breakdown": "use（用处）+ less",
+     "zh": "无用的"
+    },
+    {
+     "word": "endless",
+     "breakdown": "end（尽头）+ less",
+     "zh": "无尽的"
+    },
+    {
+     "word": "homeless",
+     "breakdown": "home（家）+ less",
+     "zh": "无家可归的"
+    }
+   ],
+   "phrases": [],
+   "note": "反义后缀：-ful（充满）",
+   "added": "2026-11-18",
+   "related": [
+    "-ful"
+   ]
+  },
+  {
+   "id": "r41",
+   "name": "-able / -ible",
+   "type": "后缀",
+   "meaning": "形容词：可……的、值得……的",
+   "essence": "动词 + able = 可以被做的",
+   "examples": [
+    {
+     "word": "comfortable",
+     "breakdown": "comfort（舒适）+ able",
+     "zh": "舒适的"
+    },
+    {
+     "word": "reliable",
+     "breakdown": "rely（依赖）+ able → 值得依赖",
+     "zh": "可靠的"
+    },
+    {
+     "word": "invisible",
+     "breakdown": "in（不）+ vis（看）+ ible",
+     "zh": "看不见的"
+    },
+    {
+     "word": "reasonable",
+     "breakdown": "reason（道理）+ able",
+     "zh": "合理的"
+    }
+   ],
+   "phrases": [],
+   "note": "两个都读「能……的」：-able 跟在完整动词后（readable），-ible 常接拉丁词根（visible、credible）。",
+   "added": "2026-11-18",
+   "related": [
+    "-tion",
+    "in- / im-"
+   ]
+  },
+  {
+   "id": "r42",
+   "name": "-er / -or",
+   "type": "后缀",
+   "meaning": "名词：做……的人 / 物",
+   "essence": "动词 + er/or = 执行者",
+   "examples": [
+    {
+     "word": "teacher",
+     "breakdown": "teach（教）+ er",
+     "zh": "老师"
+    },
+    {
+     "word": "actor",
+     "breakdown": "act（表演）+ or",
+     "zh": "演员"
+    },
+    {
+     "word": "visitor",
+     "breakdown": "visit（参观）+ or",
+     "zh": "游客"
+    },
+    {
+     "word": "computer",
+     "breakdown": "comput（计算）+ er → 会计算的机器",
+     "zh": "计算机"
+    }
+   ],
+   "phrases": [],
+   "note": "本土词配 -er（worker），拉丁词配 -or（actor、professor）。看见 -or 别慌，还是「做……的人」。",
+   "added": "2026-11-18",
+   "related": [
+    "-tion"
+   ]
+  },
+  {
+   "id": "r43",
+   "name": "-ness",
+   "type": "后缀",
+   "meaning": "名词：……的性质/状态",
+   "essence": "形容词 + ness 变名词",
+   "examples": [
+    {
+     "word": "happiness",
+     "breakdown": "happy（幸福）+ ness",
+     "zh": "幸福"
+    },
+    {
+     "word": "kindness",
+     "breakdown": "kind（善良）+ ness",
+     "zh": "善意"
+    },
+    {
+     "word": "business",
+     "breakdown": "busy（忙碌）+ ness → 忙的事",
+     "zh": "生意；事务"
+    },
+    {
+     "word": "illness",
+     "breakdown": "ill（病）+ ness",
+     "zh": "疾病"
+    }
+   ],
+   "phrases": [],
+   "note": "形容词打包成名词的万能胶水：happy→happiness，kind→kindness。",
+   "added": "2026-11-18",
+   "related": [
+    "-ful",
+    "-less"
+   ]
+  },
+  {
+   "id": "r44",
+   "name": "-ment",
+   "type": "后缀",
+   "meaning": "名词：行为、结果",
+   "essence": "动词 + ment 变名词",
+   "examples": [
+    {
+     "word": "development",
+     "breakdown": "develop（发展）+ ment",
+     "zh": "发展"
+    },
+    {
+     "word": "government",
+     "breakdown": "govern（治理）+ ment",
+     "zh": "政府"
+    },
+    {
+     "word": "movement",
+     "breakdown": "move（移动）+ ment",
+     "zh": "运动"
+    },
+    {
+     "word": "agreement",
+     "breakdown": "agree（同意）+ ment",
+     "zh": "协议"
+    }
+   ],
+   "phrases": [],
+   "note": "动词的名词化神器：agree→agreement，develop→development，move→movement。",
+   "added": "2026-11-18",
+   "related": [
+    "-tion",
+    "-ness"
+   ]
+  },
+  {
+   "id": "r45",
+   "name": "-ize / -ise",
+   "type": "后缀",
+   "meaning": "动词：使……化",
+   "essence": "形容词/名词 + ize 变动词",
+   "examples": [
+    {
+     "word": "realize",
+     "breakdown": "real（真实的）+ ize → 使成真",
+     "zh": "实现；意识到"
+    },
+    {
+     "word": "organize",
+     "breakdown": "organ（器官/组织）+ ize",
+     "zh": "组织"
+    },
+    {
+     "word": "apologize",
+     "breakdown": "apology（道歉）+ ize",
+     "zh": "道歉"
+    },
+    {
+     "word": "modernize",
+     "breakdown": "modern（现代）+ ize",
+     "zh": "使现代化"
+    }
+   ],
+   "phrases": [],
+   "note": "「使……化」：realize（使成真）、modernize（现代化）。英式写 -ise，美式写 -ize。",
+   "added": "2026-11-18",
+   "related": [
+    "re-"
+   ]
+  },
+  {
+   "id": "r46",
+   "name": "in- / im-",
+   "type": "前缀",
+   "meaning": "否定「不」；或「进入」",
+   "essence": "一词两用：接在形容词前表否定，接动词前常表进入",
+   "examples": [
+    {
+     "word": "impossible",
+     "breakdown": "im（不）+ possible（可能）",
+     "zh": "不可能的"
+    },
+    {
+     "word": "incorrect",
+     "breakdown": "in（不）+ correct（正确）",
+     "zh": "不正确的"
+    },
+    {
+     "word": "impolite",
+     "breakdown": "im（不）+ polite（礼貌）",
+     "zh": "不礼貌的"
+    },
+    {
+     "word": "include",
+     "breakdown": "in（进入）+ clude（关）→ 关在里面",
+     "zh": "包含"
+    }
+   ],
+   "phrases": [],
+   "note": "im 用在 b/m/p 前（impossible），其余多用 in-",
+   "added": "2026-11-18"
+  },
+  {
+   "id": "r47",
+   "name": "dis-",
+   "type": "前缀",
+   "meaning": "否定；相反、分开",
+   "essence": "dis = 不 / 相反，把词义反转",
+   "examples": [
+    {
+     "word": "disagree",
+     "breakdown": "dis（不）+ agree（同意）",
+     "zh": "不同意"
+    },
+    {
+     "word": "disappear",
+     "breakdown": "dis（相反）+ appear（出现）",
+     "zh": "消失"
+    },
+    {
+     "word": "discover",
+     "breakdown": "dis（打开）+ cover（盖）→ 揭开盖子",
+     "zh": "发现"
+    },
+    {
+     "word": "dishonest",
+     "breakdown": "dis（不）+ honest（诚实）",
+     "zh": "不诚实的"
+    }
+   ],
+   "phrases": [],
+   "note": "dis- 是「拆开＋相反」二合一：dislike（不喜欢）、disconnect（断开）。",
+   "added": "2026-11-18",
+   "related": [
+    "un-",
+    "mis-"
+   ]
+  },
+  {
+   "id": "r48",
+   "name": "un-",
+   "type": "前缀",
+   "meaning": "不；相反",
+   "essence": "un = not，最常用的否定前缀",
+   "examples": [
+    {
+     "word": "unhappy",
+     "breakdown": "un（不）+ happy",
+     "zh": "不开心"
+    },
+    {
+     "word": "unable",
+     "breakdown": "un（不）+ able（能够）",
+     "zh": "不能的"
+    },
+    {
+     "word": "unfair",
+     "breakdown": "un（不）+ fair（公平）",
+     "zh": "不公平的"
+    },
+    {
+     "word": "unusual",
+     "breakdown": "un（不）+ usual（平常）",
+     "zh": "不寻常的"
+    }
+   ],
+   "phrases": [],
+   "note": "最直白的否定键：unhappy、undo、unfair。加在形容词和动词前都不用变音。",
+   "added": "2026-11-18",
+   "related": [
+    "dis-",
+    "in- / im-"
+   ]
+  },
+  {
+   "id": "r49",
+   "name": "mis-",
+   "type": "前缀",
+   "meaning": "错误地",
+   "essence": "mis = 错，做错了的动作",
+   "examples": [
+    {
+     "word": "mistake",
+     "breakdown": "mis（错）+ take（拿）→ 拿错了",
+     "zh": "错误"
+    },
+    {
+     "word": "misunderstand",
+     "breakdown": "mis（错）+ understand（理解）",
+     "zh": "误解"
+    },
+    {
+     "word": "mislead",
+     "breakdown": "mis（错）+ lead（引导）",
+     "zh": "误导"
+    },
+    {
+     "word": "misspell",
+     "breakdown": "mis（错）+ spell（拼写）",
+     "zh": "拼错"
+    }
+   ],
+   "phrases": [],
+   "note": "「弄错了」：mistake（搞错）、misunderstand（误解）、mislead（误导）。",
+   "added": "2026-11-18",
+   "related": [
+    "dis-",
+    "un-"
+   ]
+  },
+  {
+   "id": "r50",
+   "name": "sub-",
+   "type": "前缀",
+   "meaning": "下；次",
+   "essence": "sub = 在下面 / 次一级",
+   "examples": [
+    {
+     "word": "subway",
+     "breakdown": "sub（地下）+ way（路）",
+     "zh": "地铁"
+    },
+    {
+     "word": "submarine",
+     "breakdown": "sub（水）+ marine（海）→ 海面之下",
+     "zh": "潜艇"
+    },
+    {
+     "word": "subject",
+     "breakdown": "sub（下）+ ject（扔）→ 扔在下面对象",
+     "zh": "科目；主题"
+    },
+    {
+     "word": "subway station",
+     "breakdown": "sub + way → 地下的车站",
+     "zh": "地铁站"
+    }
+   ],
+   "phrases": [],
+   "note": "「往下/次一级」：subway（地下通道）、subtitle（字幕＝画面下方）、subway 地铁。",
+   "added": "2026-11-18",
+   "related": [
+    "over-",
+    "trans-"
+   ]
+  },
+  {
+   "id": "r51",
+   "name": "trans-",
+   "type": "前缀",
+   "meaning": "跨越；转换",
+   "essence": "trans = 从一边到另一边",
+   "examples": [
+    {
+     "word": "transport",
+     "breakdown": "trans（跨）+ port（运）→ 跨地运输",
+     "zh": "运输"
+    },
+    {
+     "word": "translate",
+     "breakdown": "trans（转换）+ late → 语言转换",
+     "zh": "翻译"
+    },
+    {
+     "word": "transform",
+     "breakdown": "trans（转）+ form（形）",
+     "zh": "变形；转变"
+    },
+    {
+     "word": "transmit",
+     "breakdown": "trans（跨）+ mit（送）",
+     "zh": "传送"
+    }
+   ],
+   "phrases": [],
+   "note": "「跨过去」：transport（运输）、translate（翻译＝在语言之间搬运）、transfer（转移）。",
+   "added": "2026-11-18",
+   "related": [
+    "port",
+    "ex-"
+   ]
+  },
+  {
+   "id": "r52",
+   "name": "ex-",
+   "type": "前缀",
+   "meaning": "向外；前（任）",
+   "essence": "ex = 出去 / 之前的",
+   "examples": [
+    {
+     "word": "exit",
+     "breakdown": "ex（外）+ it（走）→ 走出去",
+     "zh": "出口"
+    },
+    {
+     "word": "export",
+     "breakdown": "ex（外）+ port（运）",
+     "zh": "出口"
+    },
+    {
+     "word": "exchange",
+     "breakdown": "ex（外）+ change（换）→ 向外换出",
+     "zh": "交换"
+    },
+    {
+     "word": "express",
+     "breakdown": "ex（外）+ press（压）→ 压出来",
+     "zh": "表达；快递"
+    }
+   ],
+   "phrases": [],
+   "note": "「向外」：export（出口）、exit（出口）、examine（检查＝筛出来）。ex-boyfriend 的 ex 也是它。",
+   "added": "2026-11-18",
+   "related": [
+    "in- / im-",
+    "port"
+   ]
+  },
+  {
+   "id": "r53",
+   "name": "ad- / ac-",
+   "type": "前缀",
+   "meaning": "朝向、接近",
+   "essence": "ad = 朝向；常变形为 ac-/af-/ap- 以贴合后面的字母",
+   "examples": [
+    {
+     "word": "advance",
+     "breakdown": "ad（朝前）+ vance → 向前",
+     "zh": "前进"
+    },
+    {
+     "word": "admit",
+     "breakdown": "ad（朝）+ mit（送）→ 送过去",
+     "zh": "承认；录取"
+    },
+    {
+     "word": "accept",
+     "breakdown": "ac（朝）+ cept（拿）→ 拿过去",
+     "zh": "接受"
+    },
+    {
+     "word": "arrive",
+     "breakdown": "ar（朝）+ rive（岸）→ 到岸",
+     "zh": "到达"
+    }
+   ],
+   "phrases": [],
+   "note": "「朝向」二合体，接 c 时变 ac：accept（收到面前）、adapt（朝目标调整→适应）、achieve。",
+   "added": "2026-11-18",
+   "related": [
+    "ex-"
+   ]
+  },
+  {
+   "id": "r54",
+   "name": "over-",
+   "type": "前缀",
+   "meaning": "过度；在上面",
+   "essence": "over = 太多 / 越过",
+   "examples": [
+    {
+     "word": "oversleep",
+     "breakdown": "over（过度）+ sleep（睡）→ 睡过头",
+     "zh": "睡过头"
+    },
+    {
+     "word": "overuse",
+     "breakdown": "over（过度）+ use（用）",
+     "zh": "过度使用"
+    },
+    {
+     "word": "overcome",
+     "breakdown": "over（越过）+ come（来）→ 越过来",
+     "zh": "克服"
+    },
+    {
+     "word": "overlook",
+     "breakdown": "over（上）+ look（看）→ 在上面看漏",
+     "zh": "忽视；俯瞰"
+    }
+   ],
+   "phrases": [],
+   "note": "「在上/过头」：overhead（头顶上）、oversleep（睡过头）、overact（演过头）。",
+   "added": "2026-11-18",
+   "related": [
+    "sub-"
+   ]
+  },
+  {
+   "id": "r55",
+   "name": "via / vi",
+   "type": "词根",
+   "meaning": "路、道路",
+   "essence": "vi / via = 一条路。人一旦站在路上，方向就有了意义：走在前面的成了「先前」，挡在路中央的成了「明显」，离开大路的成了「偏离」。",
+   "examples": [
+    {
+     "word": "obvious",
+     "breakdown": "ob（对着、挡在）+ vi（路）+ -ous（……的）→ 挡在路中央的",
+     "zh": "显而易见的"
+    },
+    {
+     "word": "previous",
+     "breakdown": "pre（在前）+ vi（走）+ -ous → 走在前面那一段",
+     "zh": "先前的；上一个的"
+    },
+    {
+     "word": "deviate",
+     "breakdown": "de（离开）+ vi（路）+ -ate → 从路上走开",
+     "zh": "偏离、背离（正轨）"
+    },
+    {
+     "word": "trivial",
+     "breakdown": "tri（三）+ vi（路）+ -al → 三岔路口，人人都路过的寻常地",
+     "zh": "琐碎的；不值一提的"
+    }
+   ],
+   "phrases": [],
+   "note": "同族：convey（con + vey 带路 → 传达）、voyage（航路）。看到 vey / voy 都可以想到「路」。",
+   "added": "2026-11-18",
+   "related": [
+    "pre-",
+    "circum-"
+   ]
+  },
+  {
+   "id": "r56",
+   "name": "circum-",
+   "type": "前缀",
+   "meaning": "环绕、周围",
+   "essence": "circum = 画一个圈。中心没有移动，只是事情围着它发生：站着不动的是环境，绕过去的是规避，走满一圈的是圆周。",
+   "examples": [
+    {
+     "word": "circumstance",
+     "breakdown": "circum（周围）+ st（站，同 stand）+ -ance → 站在你四周的一切",
+     "zh": "环境；情形"
+    },
+    {
+     "word": "circumvent",
+     "breakdown": "circum（绕）+ vent（来）→ 绕道而来",
+     "zh": "规避；绕过（难题）"
+    },
+    {
+     "word": "circumference",
+     "breakdown": "circum（绕）+ fer（带）+ -ence → 沿边带一圈的长度",
+     "zh": "圆周；周长"
+    },
+    {
+     "word": "circuit",
+     "breakdown": "circu（圈）+ it（走）→ 绕着走一圈",
+     "zh": "环行；电路"
+    }
+   ],
+   "phrases": [],
+   "note": "与 circle、circus（圆形场地）同源；缩写 circ. 在地址里就表示「附近」。",
+   "added": "2026-11-18",
+   "related": [
+    "via / vi",
+    "spect"
+   ]
+  }
+ ]
 };
 const LS_KEY = "en_workbench_v1";
 let S = null;
@@ -3862,6 +4142,30 @@ function isNew(r){
   const d = new Date(r.added), now = new Date();
   return (now - d) < 2*24*3600*1000;
 }
+/* 例词兼容数组 [w,bd,zh] 与对象 {word,breakdown,zh} 两种格式 */
+function exList(r){
+  return (r.examples||[]).map(e=>Array.isArray(e)?{word:e[0],breakdown:e[1],zh:e[2]}:e).filter(e=>e&&e.word);
+}
+/* 词根卡展开内容：共性 + 例词拆解 + 关联短语 + 注释 + 同族词根 */
+function rootDetail(r){
+  const relChips = (r.related||[]).map(n=>{
+    const x = S.roots.find(y=>y.name===n);
+    return x ? `<span class="tag rel" onclick="gotoRoot('${x.id}')">${esc(n)} · ${esc(x.meaning)}</span>` : "";
+  }).filter(Boolean).join(" ");
+  return `<div class="ess">🧠 共性：${esc(r.essence)}</div>
+    <div class="ex">${exList(r).map(e=>`<div class="row"><span class="w">${esc(e.word)}</span> <span class="bd">${esc(e.breakdown)}</span><br><span class="tip">${esc(e.zh)}</span></div>`).join("")}</div>
+    ${r.phrases&&r.phrases.length?`<div class="tip" style="margin-top:8px">🔗 关联短语：${r.phrases.map(x=>'<span class="tag">'+esc(x)+'</span>').join("")}</div>`:""}
+    ${r.note?`<div class="tip" style="margin-top:6px">💡 ${esc(r.note)}</div>`:""}
+    ${relChips?`<div class="tip" style="margin-top:8px">🧬 同族一起学：<span style="line-height:2.4">${relChips}</span></div>`:""}`;
+}
+function gotoRoot(id){
+  document.querySelector('#nav button[data-tab="roots"]').click();
+  setTimeout(()=>{
+    toggleRoot(id);
+    const el = document.getElementById("rtb-"+id);
+    if(el) el.scrollIntoView({behavior:"smooth",block:"center"});
+  },60);
+}
 
 /* ---------- 导航 ---------- */
 document.getElementById("nav").addEventListener("click", e=>{
@@ -3893,11 +4197,7 @@ function renderHome(){
   document.getElementById("home-new").innerHTML = showList.map(r=>`
     <div class="rootcard" onclick="toggleRoot('${r.id}')">
       <h3><span class="rn">${esc(r.name)}</span> <span class="tag">${esc(r.type)}</span>${isNew(r)&&newRoots.length?'<span class="tag new">NEW</span>':''} <span style="font-weight:500;font-size:14px;color:var(--ink)">${esc(r.meaning)}</span></h3>
-      <div id="rtb-${r.id}" class="hide">
-        <div class="ess">🧠 共性：${esc(r.essence)}</div>
-        <div class="ex">${r.examples.map(e=>`<div class="row"><span class="w">${esc(e.word)}</span> <span class="bd">${esc(e.breakdown)}</span><br><span class="tip">${esc(e.zh)}</span></div>`).join("")}</div>
-        ${r.phrases&&r.phrases.length?`<div class="tip" style="margin-top:8px">🔗 关联短语：${r.phrases.map(x=>'<span class="tag">'+esc(x)+'</span>').join("")}</div>`:""}
-      </div>
+      <div id="rtb-${r.id}" class="hide">${rootDetail(r)}</div>
     </div>`).join("");
   const weak = S.phrases.filter(p=>p.mastery<2).slice(0,6);
   document.getElementById("home-weak").innerHTML = weak.length ? weak.map(p=>`
@@ -4051,7 +4351,7 @@ function renderRoots(){
   const tp = document.getElementById("rtType").value;
   const list = S.roots.filter(r=>{
     if(tp && !r.type.includes(tp)) return false;
-    if(q && !((r.name+r.meaning+(r.essence||"")+r.examples.map(e=>e.word+e.zh).join("")).toLowerCase().includes(q))) return false;
+    if(q && !((r.name+r.meaning+(r.essence||"")+(r.note||"")+exList(r).map(e=>e.word+e.zh).join("")).toLowerCase().includes(q))) return false;
     return true;
   }).sort((a,b)=>{
     if(isNew(a)!==isNew(b)) return isNew(a)?-1:1;
@@ -4061,10 +4361,7 @@ function renderRoots(){
     <div class="rootcard" onclick="toggleRoot('${r.id}')">
       <h3><span class="rn">${esc(r.name)}</span> <span class="tag">${esc(r.type)}</span>${isNew(r)?'<span class="tag new">NEW</span>':''} <span style="font-weight:500;font-size:14px;color:var(--ink)">${esc(r.meaning)}</span></h3>
       <div id="rtb-${r.id}" class="hide">
-        <div class="ess">🧠 共性：${esc(r.essence)}</div>
-        <div class="ex">${r.examples.map(e=>`<div class="row"><span class="w">${esc(e.word)}</span> <span class="bd">${esc(e.breakdown)}</span><br><span class="tip">${esc(e.zh)}</span></div>`).join("")}</div>
-        ${r.phrases&&r.phrases.length?`<div class="tip" style="margin-top:8px">🔗 关联短语：${r.phrases.map(x=>'<span class="tag">'+esc(x)+'</span>').join("")}</div>`:""}
-        ${r.note?`<div class="tip" style="margin-top:6px">💡 ${esc(r.note)}</div>`:""}
+        ${rootDetail(r)}
         <div style="display:flex;gap:8px;margin-top:12px" onclick="event.stopPropagation()">
           <button class="btn" onclick="openRtEdit('${r.id}')">编辑</button>
           <button class="btn danger" onclick="delRt('${r.id}')">删除</button>
@@ -4091,7 +4388,7 @@ function openRtEdit(id){
     <label>核心含义</label><input type="text" id="rMean" value="${esc(r.meaning)}">
     <label>共性 / 记忆心法</label><textarea id="rEss" rows="2">${esc(r.essence)}</textarea>
     <label>例词（每行一个：单词 | 拆解 | 释义）</label>
-    <textarea id="rEx" rows="5" placeholder="benefactor | bene好+fac做+tor人 | 恩人">${esc(r.examples.map(e=>`${e.word} | ${e.breakdown} | ${e.zh}`).join("\n"))}</textarea>
+    <textarea id="rEx" rows="5" placeholder="benefactor | bene好+fac做+tor人 | 恩人">${esc(exList(r).map(e=>`${e.word} | ${e.breakdown} | ${e.zh}`).join("\n"))}</textarea>
     <label>关联短语（逗号分隔，如 put off, turn off）</label><input type="text" id="rPh" value="${esc((r.phrases||[]).join(", "))}">
     <label>备注</label><input type="text" id="rNote" value="${esc(r.note||"")}">
     <div class="acts">
@@ -4143,7 +4440,7 @@ function showCard(){
   const c = flash.cards[flash.idx];
   const area = document.getElementById("stArea");
   const front = flash.type==="phrases" ? `<div class="big">${esc(c.en)}</div><div class="tip" style="margin-top:16px">点击卡片查看释义</div>` : `<div class="big">${esc(c.name)}</div><div class="tip" style="margin-top:10px">${esc(c.type)}</div><div class="tip" style="margin-top:10px">点击卡片查看含义与例词</div>`;
-  const back = flash.type==="phrases" ? `<div class="big">${esc(c.zh)}</div>${c.note?`<div class="sm">💡 ${esc(c.note)}</div>`:""}<div class="sm">${esc(catName(c.cat))}</div>` : `<div class="big" style="font-size:22px">${esc(c.meaning)}</div><div class="sm">🧠 ${esc(c.essence)}</div><div class="sm">${c.examples.slice(0,4).map(e=>`<b>${esc(e.word)}</b> ${esc(e.zh)}`).join("<br>")}</div>`;
+  const back = flash.type==="phrases" ? `<div class="big">${esc(c.zh)}</div>${c.note?`<div class="sm">💡 ${esc(c.note)}</div>`:""}<div class="sm">${esc(catName(c.cat))}</div>` : `<div class="big" style="font-size:22px">${esc(c.meaning)}</div><div class="sm">🧠 ${esc(c.essence)}</div><div class="sm">${exList(c).slice(0,6).map(e=>`<b>${esc(e.word)}</b> ${esc(e.zh)}`).join("<br>")}</div>${c.note?`<div class="sm">💡 ${esc(c.note)}</div>`:""}`;
   const total = flash.cards.length;
   area.innerHTML = `
     <div class="flash-wrap">
