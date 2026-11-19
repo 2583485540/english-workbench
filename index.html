@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>英语词根花园 · 学习工作台</title>
-<meta name="description" content="基于词根词缀法的英语短语学习工作台：自动梳理、词根花园、闪卡学习、网盘数据同步。">
+<title>Csilla英语花园 · 学习工作台</title>
+<meta name="description" content="Csilla 的英语花园：基于词根词缀法的英语学习工作台：自动梳理、词根花园、闪卡学习、网盘数据同步。">
 <style>
 :root{
   --bg1:#f5f1ff; --bg2:#fff4ef; --card:#fffdfa; --line:#ece5f5;
@@ -112,12 +112,13 @@ code{background:#f4f0fb;padding:2px 7px;border-radius:6px;font-size:12.5px;font-
 </head>
 <body>
 <header><div class="hwrap">
-  <div class="logo">🌷 英语<span>词根花园</span></div>
+  <div class="logo">🌷 <span>Csilla</span>英语花园</div>
   <nav id="nav">
     <button data-tab="home" class="on">总览</button>
     <button data-tab="phrases">短语库</button>
     <button data-tab="roots">词根花园</button>
     <button data-tab="study">学习模式</button>
+    <button data-tab="ielts">🌱 雅思小径</button>
     <button data-tab="sync">数据同步</button>
   </nav>
 </div></header>
@@ -182,6 +183,52 @@ code{background:#f4f0fb;padding:2px 7px;border-radius:6px;font-size:12.5px;font-
     </div>
   </section>
 
+  <!-- 雅思小径 -->
+  <section id="tab-ielts" class="hide">
+    <div class="grid g2">
+      <div class="card">
+        <h2>🔥 连胜</h2>
+        <div style="display:flex;align-items:center;gap:20px">
+          <div class="stat" style="flex:0 0 auto"><div class="num" id="il-streak">0</div><div class="lab">连胜天数</div></div>
+          <div style="flex:1">
+            <p class="tip" id="il-streaktip"></p>
+            <button class="btn pri" style="margin-top:10px" id="il-punch" onclick="ieltsPunch()">✔ 今日打卡</button>
+          </div>
+        </div>
+        <p class="tip" style="margin-top:10px" id="il-besttip"></p>
+      </div>
+      <div class="card">
+        <h2>🎯 目标</h2>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end">
+          <div><label>目标分</label>
+            <select id="il-goal" onchange="saveIelts()"><option>6.0</option><option>6.5</option><option>7.0</option><option>7.5</option></select>
+          </div>
+          <div><label>考试日期（可选，不填也完全没关系）</label>
+            <input type="date" id="il-exam" onchange="saveIelts()">
+          </div>
+        </div>
+        <p class="tip" style="margin-top:10px" id="il-goaltip"></p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h2>🍵 今日微任务</h2>
+      <p class="tip" style="margin-bottom:10px">每个 10–20 分钟，做完就算今天赢。三分钟热度没关系——热度走了，习惯还在。</p>
+      <div id="il-tasks"></div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card">
+        <h2>📊 四科自评</h2>
+        <p class="tip" style="margin-bottom:8px">凭感觉选就好，这是给自己看的地形图，不是成绩单。</p>
+        <div id="il-skills"></div>
+      </div>
+      <div class="card">
+        <h2>🏅 成就墙</h2>
+        <p class="tip" style="margin-bottom:8px" id="il-badgetip"></p>
+        <div id="il-badges"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- 数据同步 -->
   <section id="tab-sync" class="hide">
     <div class="card">
@@ -221,7 +268,7 @@ code{background:#f4f0fb;padding:2px 7px;border-radius:6px;font-size:12.5px;font-
 </main>
 
 <div id="modalRoot"></div>
-<p class="footer-note">英语词根花园 · 每天认识一个词根，解锁一片森林 🌳</p>
+<p class="footer-note">Csilla英语花园 · 每天认识一个词根，解锁一片森林 🌳</p>
 
 <script>
 const SEED = {
@@ -4107,11 +4154,62 @@ const SEED = {
     "spect"
    ]
   }
- ]
+ ],
+ "ielts": {
+  "goal": 6.5,
+  "background": "高考英语70-80分水平，约6年未系统学英语，INFP性格易三分钟热度",
+  "taskPool": [
+   "闪卡模式过 10 张卡片（不求全对）",
+   "复习 15 条短语，浏览一遍就好",
+   "把今天的新词根例词念出声",
+   "听一段英语视频/播客，抓住 3 个听懂的词",
+   "用今天的词根造 3 个句子（不用完美）",
+   "抄写并朗读 10 条短语",
+   "看一集英文字幕剧，看懂大意就算赢",
+   "写 5 句英文小日记，语法不重要",
+   "把 5 个生词编成一个无厘头小故事",
+   "跟读一段英语音频 5 分钟",
+   "做一篇剑桥真题阅读，不限时",
+   "把昨天学的短语再读一遍"
+  ]
+ }
 };
 const LS_KEY = "en_workbench_v1";
 let S = null;
 let flash = null;
+
+/* ---------- 雅思小径 ---------- */
+const DEFAULT_IELTS = {
+  goal: 6.5, examDate: "",
+  streak: {count:0, last:"", best:0},
+  today: {date:"", done:[]},
+  skills: {"听力":null, "阅读":null, "写作":null, "口语":null},
+  taskPool: [
+    "闪卡模式过 10 张卡片（不求全对）",
+    "复习 15 条短语，浏览一遍就好",
+    "把今天的新词根例词念出声",
+    "听一段英语视频/播客，抓住 3 个听懂的词",
+    "用今天的词根造 3 个句子（不用完美）",
+    "抄写并朗读 10 条短语",
+    "看一集英文字幕剧，看懂大意就算赢",
+    "写 5 句英文小日记，语法不重要",
+    "把 5 个生词编成一个无厘头小故事",
+    "跟读一段英语音频 5 分钟",
+    "做一篇剑桥真题阅读，不限时",
+    "把昨天学的短语再读一遍",
+  ],
+  badges: [], taskTotal: 0
+};
+const BADGES = [
+  {id:"first", name:"🌱 第一次打卡", test:s=>s.streak.best>=1},
+  {id:"s3",    name:"🔥 连胜 3 天",  test:s=>s.streak.best>=3},
+  {id:"s7",    name:"⚡ 连胜一周",   test:s=>s.streak.best>=7},
+  {id:"s21",   name:"🌳 连胜三周",   test:s=>s.streak.best>=21},
+  {id:"t10",   name:"🍵 完成第 10 个微任务", test:s=>s.taskTotal>=10},
+  {id:"t50",   name:"🧺 完成第 50 个微任务", test:s=>s.taskTotal>=50},
+  {id:"p20",   name:"🌸 熟练短语 20 条",  test:s=>S.phrases.filter(p=>p.mastery===2).length>=20},
+  {id:"p100",  name:"🌺 熟练短语 100 条", test:s=>S.phrases.filter(p=>p.mastery===2).length>=100},
+];
 
 /* ---------- 数据层 ---------- */
 function load(){
@@ -4126,6 +4224,14 @@ function upgrade(){
   if(!S.phrases) S.phrases=[];
   if(!S.roots) S.roots=[];
   if(!S.categories) S.categories=[];
+  if(!S.ielts){ S.ielts = JSON.parse(JSON.stringify(DEFAULT_IELTS)); }
+  else{
+    const D = DEFAULT_IELTS;
+    for(const k of ["goal","examDate","streak","today","skills","taskPool","badges","taskTotal"]){
+      if(S.ielts[k]===undefined) S.ielts[k]=JSON.parse(JSON.stringify(D[k]));
+    }
+    for(const k in D.skills){ if(S.ielts.skills[k]===undefined) S.ielts.skills[k]=null; }
+  }
 }
 function save(){
   S.updatedAt = new Date().toISOString().slice(0,19);
@@ -4171,10 +4277,11 @@ function gotoRoot(id){
 document.getElementById("nav").addEventListener("click", e=>{
   const b = e.target.closest("button"); if(!b) return;
   document.querySelectorAll("#nav button").forEach(x=>x.classList.toggle("on", x===b));
-  ["home","phrases","roots","study","sync"].forEach(t=>{
+  ["home","phrases","roots","study","ielts","sync"].forEach(t=>{
     document.getElementById("tab-"+t).classList.toggle("hide", t!==b.dataset.tab);
   });
   if(b.dataset.tab==="home") renderHome();
+  if(b.dataset.tab==="ielts") renderIelts();
   if(b.dataset.tab==="sync") refreshSyncInfo();
 });
 
@@ -4543,11 +4650,120 @@ function showModal(html){
 }
 function closeModal(){ document.getElementById("modalRoot").innerHTML=""; }
 
+/* ---------- 雅思小径（交互） ---------- */
+function todayStr(){ return new Date().toISOString().slice(0,10); }
+function pickTasks(){
+  const pool = S.ielts.taskPool, ds = todayStr();
+  let h = 0; for(const ch of ds) h = (h*31 + ch.charCodeAt(0))>>>0;
+  const picked = new Set(); let k = 0;
+  while(picked.size < 3 && k < 40){ picked.add(pool[(h + k*7) % pool.length]); k++; }
+  return [...picked];
+}
+function renderIelts(){
+  const I = S.ielts, today = todayStr();
+  if(I.today.date !== today){ I.today = {date:today, done:[]}; }
+  // 连胜卡
+  document.getElementById("il-streak").textContent = I.streak.count;
+  const punched = I.streak.last === today;
+  document.getElementById("il-punch").textContent = punched ? "🌷 今天已经打过卡啦" : "✔ 今日打卡";
+  document.getElementById("il-punch").disabled = punched;
+  document.getElementById("il-punch").style.opacity = punched ? .6 : 1;
+  document.getElementById("il-streaktip").textContent = punched
+    ? "今天的小步已经迈出去了，安心休息 🌙"
+    : (I.streak.count>0 ? "别断呀——不过真断了也没关系，重新开始就好。" : "万事开头难，第一步最值得骄傲。");
+  document.getElementById("il-besttip").textContent = I.streak.best>0 ? `最长连胜 ${I.streak.best} 天 —— 那可是你真实的记录。` : "";
+  // 目标
+  const goalSel = document.getElementById("il-goal");
+  const gv = String(I.goal);
+  if(![...goalSel.options].some(o=>o.value===gv)){
+    const opt = document.createElement("option"); opt.value = gv; opt.textContent = gv;
+    goalSel.appendChild(opt);
+  }
+  goalSel.value = gv;
+  document.getElementById("il-exam").value = I.examDate || "";
+  const examTip = document.getElementById("il-goaltip");
+  if(I.examDate){
+    const days = Math.round((new Date(I.examDate) - new Date(today)) / 86400000);
+    examTip.textContent = days>0 ? `距考试还有 ${days} 天。平均到每一天，其实只需要一点点。` : "考试日过了也别怕，练习本身已经是收获。";
+  } else examTip.textContent = "没有截止日期的日子，进步是自由的。";
+  // 微任务
+  const tasks = pickTasks();
+  document.getElementById("il-tasks").innerHTML = tasks.map(t=>{
+    const done = I.today.done.includes(t);
+    return `<div style="display:flex;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px dashed var(--line)">
+      <input type="checkbox" ${done?"checked":""} onchange="toggleTask('${esc(t).replace(/'/g,"&#39;")}',this.checked)" style="width:17px;height:17px;accent-color:var(--accd)">
+      <span style="${done?"text-decoration:line-through;color:var(--sub)":""}">${esc(t)}</span>
+      ${done?'<span class="tag g">done</span>':""}
+    </div>`;
+  }).join("") + `<p class="tip" style="margin-top:10px" id="il-tasktip">${
+    I.today.done.length>=3 ? "三个都完成了，今天已经赢了 ✨ 打个卡收下这份小胜利吧。"
+    : I.today.done.length>0 ? `已完成 ${I.today.done.length}/3 —— 慢慢来，做多少算多少。`
+    : "先挑一个最不费劲的开始吧。"}</p>`;
+  // 四科
+  document.getElementById("il-skills").innerHTML = Object.keys(I.skills).map(k=>`
+    <div style="display:flex;align-items:center;gap:10px;padding:7px 0">
+      <span style="width:44px;font-weight:600">${k}</span>
+      <select onchange="setSkill('${k}',this.value)" style="flex:1">
+        <option value="">未评估</option>
+        ${[4,4.5,5,5.5,6,6.5,7,7.5].map(v=>`<option ${I.skills[k]===v?"selected":""}>${v}</option>`).join("")}
+      </select>
+      <span class="tip" style="width:auto">${
+        I.skills[k]===null ? "" :
+        I.skills[k] >= I.goal ? "已达标，稳住 🌟" :
+        `距目标还差 ${(I.goal - I.skills[k]).toFixed(1)} 分，一天一点点`}</span>
+    </div>`).join("");
+  // 成就墙
+  const owned = new Set(I.badges.map(b=>b.id));
+  document.getElementById("il-badgetip").textContent = I.badges.length ? `已收集 ${I.badges.length}/${BADGES.length} 枚` : "成就不是压力，是路过的纪念品。";
+  document.getElementById("il-badges").innerHTML = BADGES.map(b=>{
+    const got = owned.has(b.id);
+    return `<span class="tag ${got?"g":""}" style="${got?"":"opacity:.35;filter:grayscale(1)"};margin-bottom:8px">${b.name}</span>`;
+  }).join("");
+}
+function saveIelts(){
+  const I = S.ielts;
+  const gv = document.getElementById("il-goal").value;
+  I.goal = parseFloat(gv);
+  I.examDate = document.getElementById("il-exam").value || "";
+  save(); renderIelts();
+}
+function setSkill(k, v){
+  S.ielts.skills[k] = v==="" ? null : parseFloat(v);
+  save(); renderIelts();
+}
+function toggleTask(t, on){
+  const I = S.ielts;
+  if(on && !I.today.done.includes(t)) I.today.done.push(t);
+  if(!on) I.today.done = I.today.done.filter(x=>x!==t);
+  save(); renderIelts();
+}
+function ieltsPunch(){
+  const I = S.ielts, today = todayStr();
+  if(I.streak.last === today) return;
+  const yest = new Date(Date.now() - 86400000).toISOString().slice(0,10);
+  I.streak.count = (I.streak.last === yest) ? I.streak.count + 1 : 1;
+  I.streak.last = today;
+  I.streak.best = Math.max(I.streak.best||0, I.streak.count);
+  save();
+  checkBadges();
+  renderIelts();
+}
+function checkBadges(){
+  const I = S.ielts;
+  const owned = new Set(I.badges.map(b=>b.id));
+  const fresh = BADGES.filter(b=>!owned.has(b.id) && b.test(I));
+  if(fresh.length){
+    fresh.forEach(b=>I.badges.push({id:b.id, name:b.name, date:todayStr()}));
+    save();
+    showModal(`<h2>🎉 新纪念品到手</h2><p class="tip" style="margin:12px 0">解锁了：${fresh.map(b=>"<b>"+esc(b.name)+"</b>").join("、")}<br><br>不用谢自己太多，继续慢慢走就好 🌷</p><div class="acts"><button class="btn pri" onclick="closeModal();renderIelts()">收下啦</button></div>`);
+  }
+}
+
 /* ---------- 初始化 ---------- */
 function renderAll(){
   fillCatSelect(document.getElementById("phCat"));
   fillCatSelect(document.getElementById("stCat"));
-  renderPhrases(); renderRoots(); renderHome(); refreshSyncInfo();
+  renderPhrases(); renderRoots(); renderHome(); renderIelts(); refreshSyncInfo();
 }
 document.getElementById("phSearch").addEventListener("input", renderPhrases);
 document.getElementById("phCat").addEventListener("change", renderPhrases);
